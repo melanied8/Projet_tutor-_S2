@@ -1,9 +1,13 @@
 body {
 	margin : 0;
+}
+
+button, input::placeholder, body {
 	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
 }
 
+/* Reste a régler le problème e centrage du bloc ! */
 .center-div {
 	display: flex;
 	justify-content: center;
@@ -15,9 +19,15 @@ body {
 	margin-bottom: 8px;
 }
 
+
+input::placeholder{
+	tab-size: 4;
+	color: #ADADAD;
+}
+
 .box-model {
-	border-width: 1px;
-	border-color: grey;
+	box-sizing: border-box;
+	border : 1px solid #ADADAD;
 	width: 350px;
 	height: 48px;
 	border-radius: 4px;
@@ -38,6 +48,8 @@ body {
 }
 
 .login a {
+	text-decoration: none;
+	color :#FF7675;
 	display: block;
 	margin-top: 32px;
 	text-align: center;
