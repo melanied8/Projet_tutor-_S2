@@ -2,6 +2,10 @@ body {
 	margin : 0;
 }
 
+li {
+	list-style-type: none;
+}
+
 button, input::placeholder, body {
 	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
@@ -54,4 +58,71 @@ input::placeholder{
 	display: block;
 	margin-top: 32px;
 	text-align: center;
+}
+
+/*********************** Home ***********************/
+
+.container {
+	margin: 32px 16px 0 16px;
+}
+
+.home{
+	margin-right: 13px;
+}
+
+.email {
+	font-weight: bold;
+	margin-top: 3px;
+}
+
+.home-email {
+	display: flex;
+}
+
+.increment-box {
+	/* spécificité de la boite */
+	width: 24px;
+	height: 24px;
+	border-radius: 3px;
+	background-color: #FF7675;
+
+
+	/* specificité du texte à l'intérieur de la boîte */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.nav-list {
+	padding: 0;
+	margin: 0;
+}
+
+.nav-list-item {
+	margin-bottom: 16px;
+	display: flex;
+	justify-content: space-between; 
+}
+
+.plus {
+	margin-right: 18px;
+}
+
+.list-div {
+	display: flex;
+}
+
+.line {
+	margin-top: 49px;
+	margin-left: 18px;
+}
+
+.list{
+	margin-top: 39px;
+	margin-bottom: 24px;
+	font-size: 16px;
+}
+
+.new-list {
 }
