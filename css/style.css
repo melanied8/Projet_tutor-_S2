@@ -21,7 +21,7 @@ button, input::placeholder, body {
 
 
 input::placeholder{
-	tab-size: 4;
+	text-indent: 1em;
 	color: #ADADAD;
 }
 
@@ -43,6 +43,7 @@ input::placeholder{
 }
 
 .login input {
+	text-indent: 1em;
 	margin-bottom: 24px;
 	padding: 0;
 }
