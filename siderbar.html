@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<title>Side-bar (temporaire)</title>
+</head>
+<body>
+	<div class="sb-wrapper position">
+		<img class="close" src="./assets/close.svg" />
+		<form class="sb-form">
+			<label class="title">Titre</label>
+			<input class="sb-box little" type="text" name="title">
+
+			<title class="step">Etapes</title>
+			<ul class="nav-list">
+				<li>
+					<div class="sb-box little flex-item space-between">
+						<div class="flex-item">
+							<input class="radio-size" type="radio" name="radio">
+							<label>Aller sur github.com</label>
+						</div>
+						<img class="remove" src="./assets/remove.svg">
+					</div>
+				</li>
+				<li>
+					<div class="sb-box flex-item little">
+						<input class="sb-box" type="text" name="new-step" placeholder="Nouvelle etape">
+						<img src="./assets/plus.svg">
+					</div>
+				</li>
+			</ul>
+			
+			
+	<label class="dead-line">Echeance</label>
+	<input class="sb-box" type="date" name="date">
+	<label class="notes">Notes</label>
+	<input class="sb-box big" type="text" name="notes" placeholder="Quelques détails à propos de cette tache...">
+	<button type="submit">Enregistrer</button>
+	<button type="#">Annuler</button>
+	</form>
+</div>
+
+
+</body>
+</html>
