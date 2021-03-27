@@ -19,14 +19,14 @@ p {
 }
 
 
-/*************************** Login *************************/
+/*************************** Login & Signup *************************/
 
-.login-wrapper, .signup-wrapper {
+.login-wrapper, .signup-wrapper, .fp-wrapper {
 	width: 100%;
 	height: 100%;
 }
 
-.login, .signup {
+.login, .signup, .fp {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -34,7 +34,7 @@ p {
 	padding: 0 13px 0 12px;
 }
 
-.login label, .signup label{
+.login label, .signup label, .fp label{
 	margin-bottom: 8px;
 }
 
@@ -42,7 +42,7 @@ input {
 	text-indent: 1em;
 }
 
-.login input, .signup input {
+.login input, .signup input, .fp input {
 	margin-bottom: 24px;
 }
 
@@ -83,13 +83,18 @@ input::placeholder{
 
 
 @media screen and (min-width: 375px) {
-	.login-wrapper, .signup-wrapper {
+	.login-wrapper, .signup-wrapper, .fp-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
+<<<<<<< HEAD
 	
 	.login, .signup {
+=======
+
+	.login, .signup, .fp {
+>>>>>>> 8b5fbea192722f85a1ceb3a52f5c556b29a0f155
 		width: 375px;
 	}
 }
@@ -158,7 +163,7 @@ input::placeholder{
 	margin: 0 20px 0 20px;
 }
 
-.list-details .nav-list {
+.list-details li:first-child {
 	border-top : 1px solid #BDBDBD;
 }
 
@@ -206,6 +211,57 @@ input::placeholder{
 
 .list-details input::placeholder {
 	text-indent: 0em;
+}
+
+@media screen and (max-width: 768px) {
+
+	.delete-forever {
+		display: none;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.menu {
+		display: none;
+	}
+
+	.header {
+		color: black;
+		background-color: white;
+		margin-bottom: 75px;
+	}
+
+	.header p {
+		font-weight: 700;
+		font-size: 32px;
+		position: absolute;
+		top: 32px;
+		left: 32px;
+	}
+
+
+	.delete-forever {
+		width: 198px;
+		height: 48px;
+		background-color: #D63031;
+		color: white;
+		position: absolute;
+		right: 28px;
+		top: 27px;
+		border-radius: 3px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.delete-forever img {
+		margin-right: 21px;
+	}
+
+	.list-details .nav-list {
+		padding: 0 16px 0 19px;
+	}
 }
 
 /*Side-bar */
