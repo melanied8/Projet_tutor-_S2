@@ -14,12 +14,10 @@ li {
 	list-style-type: none;
 }
 
-button, input::placeholder, body {
-	font-size: 16px;
-	font-family: 'Roboto', sans-serif;
+p {
+	margin: 0;
 }
 
-/* Reste a régler le problème de centrage du bloc ! */
 
 .login, .signup {
 	height: 100%;
@@ -29,7 +27,7 @@ button, input::placeholder, body {
 	padding: 0 13px 0 12px;
 }
 
-label {
+.login label, .signup label{
 	margin-bottom: 8px;
 }
 
@@ -76,7 +74,7 @@ input::placeholder{
 }
 
 @media screen and (min-width: 375px) {
-	.contain {
+	.login-wrapper, .signup-wrapper {
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -139,10 +137,6 @@ input::placeholder{
 	display: flex;
 }
 
-.line {
-	margin-top: 49px;
-	margin-left: 18px;
-}
 
 .list{
 	margin-top: 39px;
@@ -156,6 +150,7 @@ input::placeholder{
 
 .header {
 	font-size: 18px;
+	line-height: 21.09px;
 	font-weight: 500;
 	height: 54px;
 	background-color: #FF7675;
@@ -165,26 +160,17 @@ input::placeholder{
 	margin-bottom: 24px;
 }
 
-.line {
-	border-top : 1px solid #BDBDBD;
-}
-
 .menu {
 	width: 16px;
 	height: 14px;
-	margin: 20px;
+	margin: 0 20px 0 20px;
 }
 
-.header h1 {
-	margin: 0;
+.list-details .nav-list {
+	border-top : 1px solid #BDBDBD;
 }
 
-.line {
-	margin: 0;
-	display: block;
-}
-
-.nav-box {
+.list-details li {
 	border-bottom: 1px solid #BDBDBD;
 }
 
@@ -193,12 +179,8 @@ input::placeholder{
 	align-items: center;
 }
 
-.item-title {
+.item-size {
 	height: 48px;	
-}
-
-.space-between {
-	justify-content: space-between;
 }
 
 .radio-size {
@@ -210,12 +192,20 @@ input::placeholder{
 	margin : 14px 16px 14px 16px;
 }
 
+.space-between {
+	justify-content: space-between;
+}
+
 .delete {
 	margin-right: 24px;
 }
 
 .plus {
 	margin: 14px 16px 14px 14px;
+}
+
+.list-details input {
+	border : none;
 }
 
 /*Side-bar */
