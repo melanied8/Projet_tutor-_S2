@@ -44,9 +44,8 @@ input::placeholder{
 }
 
 .button {
-	/*
+	
 	background-color: #FF7675;
-	*/
 	color: white;
 	border : none;
 	display: flex;
@@ -128,8 +127,6 @@ input::placeholder{
 	font-size: 16px;
 }
 
-.new-list {
-}
 
 /***************************** listDetails *********************************/
 
@@ -283,6 +280,71 @@ textarea{
  resize:none;
 }
 
+/***************************** Settings *********************************/
+
+
+@media screen and (max-width: 767px) 
+{
+	.rectangle_settings
+	{	
+	background-color: #FF7675; 
+	display : grid;
+	grid-template-columns: repeat(2,auto);
+	grid-gap: 20px;
+	justify-content: left;
+    align-items: center;
+    width: 100%;
+	}
+
+	.rectangle_settings p
+	{
+	color : #FFFFFF;
+	}	
+
+	.sidebar
+	{
+		display: none;
+	}
+
+}
+
+
+.settings
+{
+	padding-bottom: 31px;
+	padding-right : 12px;
+	padding-left : 13px;
+
+}
+
+.settings .settings-password
+{
+	margin-top : 48px;
+}
+
+.settings input
+{	
+	text-indent: 1em;
+	margin-bottom: 24px;
+	padding: 0;
+
+} 
+
+.settings label
+{
+	text-decoration: none;
+	display: block;
+	margin-top: 32px;	
+}
+
+@media screen and (min-width: 768px) {
+	.rectangle_settings p
+	{
+	color : black;
+	font-size: 32px;
+	font-weight: 700;
+	}
+}
 
 
 

@@ -5,43 +5,63 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<title>Settings</title>
+	<meta
+	name="viewport"
+	content="width=device-width, initial-scale=1.0"
+  />
 </head>
 <body>
-<img src="./assets/home.svg">
-<h1>Mes lites</h1>
-<ul>
-	<li><img src="./assets/plus.svg">Nouvelle liste</li>
-</ul>
+
+	<div class="sidebar">
+	<img src="./assets/home.svg">
+	<h1>Mes lites</h1>
+	<ul>
+		<li><img src="./assets/plus.svg">Nouvelle liste</li>
+	</ul>
+	
+	<img src="./assets/settings.svg">
+	<label>Paramètres</label>
+	<img src="./assets/logout.svg">
+	<label>Deconnexion</label>
+	</div>
+
+<div class="wrapper">
+
+<div class = "rectangle_settings">
+
+	<img src="./assets/menu.svg">
+	<p>Paramètres</p>
+</div>
 
 
-<img src="./assets/settings.svg">
-<label>Paramètres</label>
-<img src="./assets/logout.svg">
-<label>Deconnexion</label>
+<div class = "settings">
 
-<h1>Paramètres</h1>
 <h2>Adresse e-mail</h2>
 <p>Adresse e-mail actuelle : </p>
+<!-- Mettre le $_SESSION['login'] -->
 <form action="#" method="POST">
 <label>Nouvelle adresse e-mail</label>
-<input type="email" name="email" placeholder="mail@provider.com">
+<input class="box-model" type="email" name="email" placeholder="mail@provider.com">
 <label>Confirmer l'adresse e-mail</label>
-<input type="password" name="password">
-<button type="submit">Modifier l'adresse e-mail</button>
+<input class="box-model" type="email" name="email_confirmation" placeholder="mail@provider.com">
+<button class="button box-model" type="submit">Modifier l'adresse e-mail</button>
 </form>
 
-<h2>Mot de passe</h2>
 
+<h2 class = "settings-password">Mot de passe</h2>
 <form action="#" method="POST">
 <label>Mot de passe actuel</label>
-<input type="password" name="password">
+<input class="box-model" type="password" name="actual_password" placeholder="password">
 <label>Nouveau mot de passe</label>
-<input type="password" name="password">
+<input class="box-model" type="password" name="new_password" placeholder="password">
 <label>Confirmer le nouveau mot de passe</label>
-<input type="password" name="password">
-<button type="submit">Modifier le mot de passe</button>
+<input class="box-model" type="password" name="new_password_confirmation" placeholder="password">
+<button class="button box-model" type="submit">Modifier le mot de passe</button>
 </form>
 
+</div>
+
+</div>
 
 
 </body>
