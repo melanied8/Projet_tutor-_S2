@@ -394,6 +394,17 @@ textarea{
 		font-size: 16px;
 		line-height: 19px;
 	}
+
+	.sidebar li{
+		display : flex;
+		align-items: center;
+		grid-column-gap: 18px;
+	}
+
+	.sidebar ul{
+		margin-left : 0px;
+
+	}
 	
 	.desktop-grid
 	{
@@ -404,6 +415,10 @@ textarea{
 
 	}
 
+	.desktop-grid h2
+	{
+		padding-top : 28px;
+	}
 	
 	.settings-line{
 		border: 1px solid #ADADAD;
@@ -421,7 +436,7 @@ textarea{
 	}
 
 	.sidebar ul{
-		padding-left : 19px;
+		padding-left : 0px;
 	}
 
 	.settings_and_deco
