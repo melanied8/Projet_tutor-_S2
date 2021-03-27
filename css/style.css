@@ -317,6 +317,9 @@ textarea{
 
 /***************************** Settings *********************************/
 
+.wrapper .button{
+	background-color:  #FF7675;  
+}
 
 @media screen and (max-width: 767px) 
 {
@@ -336,21 +339,19 @@ textarea{
 	color : #FFFFFF;
 	}	
 
+	.settings
+	{
+	padding-bottom: 31px;
+	padding-right : 12px;
+	padding-left : 13px;
+	}
+
 	.sidebar
 	{
 		display: none;
 	}
-
 }
 
-
-.settings
-{
-	padding-bottom: 31px;
-	padding-right : 12px;
-	padding-left : 13px;
-
-}
 
 .settings .settings-password
 {
@@ -373,11 +374,94 @@ textarea{
 }
 
 @media screen and (min-width: 768px) {
+	.wrapper
+	{
+	display : grid;	
+	grid-template-columns :max-content;
+	}
+
+
 	.rectangle_settings p
 	{
 	color : black;
 	font-size: 32px;
+	margin-block-start: 0px;
 	font-weight: 700;
+	}
+
+	.sidebar
+	{
+		padding-top: 32px;
+		width : 300px;
+		grid-column: 1;
+		background-color: #F5F5F5;
+		position : relative;
+		padding-left : 16px;
+		
+	}
+
+	.sidebar h1
+	{
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.sidebar li{
+		display : flex;
+		align-items: center;
+		grid-column-gap: 18px;
+	}
+
+	.sidebar ul{
+		margin-left : 0px;
+
+	}
+	
+	.desktop-grid
+	{
+		grid-column: 2;
+		padding-left: 32px;
+		width : 350px;
+		padding-bottom : 31px;
+
+	}
+
+	.desktop-grid h2
+	{
+		padding-top : 28px;
+	}
+	
+	.settings-line{
+		border: 1px solid #ADADAD;
+		width : 176px;
+		height : 0px;
+	}
+
+	.lists_and_line
+	{
+		display : grid;
+		grid-template-columns: repeat(2,auto);
+		grid-gap: 18px;
+		justify-content: left;
+		align-items: center;
+	}
+
+	.sidebar ul{
+		padding-left : 0px;
+	}
+
+	.settings_and_deco
+	{
+		display : grid;
+		grid-template-columns: repeat(2,auto);
+		grid-gap: 13.67px;
+		justify-content: left;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+		padding-bottom : 19px;
 	}
 }
 
