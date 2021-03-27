@@ -221,6 +221,13 @@ input::placeholder{
 	text-indent: 0em;
 }
 
+@media screen and (max-width: 768px) {
+
+	.delete-forever {
+		display: none;
+	}
+}
+
 
 @media screen and (min-width: 768px) {
 	.menu {
