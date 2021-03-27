@@ -19,6 +19,13 @@ p {
 }
 
 
+/*************************** Login *************************/
+
+.login-wrapper, .signup-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
 .login, .signup {
 	height: 100%;
 	display: flex;
@@ -75,8 +82,6 @@ input::placeholder{
 
 @media screen and (min-width: 375px) {
 	.login-wrapper, .signup-wrapper {
-		width: 100%;
-		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -189,7 +194,7 @@ input::placeholder{
 }
 
 .radio {
-	margin : 14px 16px 14px 16px;
+	margin : 0 16px 0  15px;
 }
 
 .space-between {
@@ -201,11 +206,19 @@ input::placeholder{
 }
 
 .plus {
-	margin: 14px 16px 14px 14px;
+	padding: 0;
+	background : transparent;
+	border: none;
+	margin : 0 16px 0 13px;
 }
 
 .list-details input {
 	border : none;
+	text-indent: 0em;
+}
+
+.list-details input::placeholder {
+	text-indent: 0em;
 }
 
 /*Side-bar */
