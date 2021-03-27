@@ -304,7 +304,9 @@ textarea{
 
 /***************************** Settings *********************************/
 
-
+.wrapper .button{
+	background-color:  #FF7675;  
+}
 
 @media screen and (max-width: 767px) 
 {
@@ -381,6 +383,7 @@ textarea{
 		grid-column: 1;
 		background-color: #F5F5F5;
 		position : relative;
+		padding-left : 16px;
 		
 	}
 
@@ -400,6 +403,7 @@ textarea{
 		padding-bottom : 31px;
 
 	}
+
 	
 	.settings-line{
 		border: 1px solid #ADADAD;
