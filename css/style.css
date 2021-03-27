@@ -73,6 +73,8 @@ input::placeholder{
 	text-align: center;
 }
 
+
+
 @media screen and (min-width: 375px) {
 	.login-wrapper, .signup-wrapper {
 		width: 100%;
@@ -81,11 +83,10 @@ input::placeholder{
 		align-items: center;
 		justify-content: center;
 	}
-
+	
 	.login, .signup {
 		width: 375px;
 	}
-
 }
 
 /*********************** Home ***********************/
