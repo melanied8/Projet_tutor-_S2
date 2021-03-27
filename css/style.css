@@ -358,6 +358,17 @@ textarea{
  resize:none;
 }
 
+.listDetails-desktop-grid
+{
+	grid-column: 2;
+}
+
+.listDetails-desktop-grid h2
+{
+	padding-top: 32px;
+	padding-left : 19px;
+}
+
 /***************************** Settings *********************************/
 
 .wrapper .button{
