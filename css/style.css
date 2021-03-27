@@ -96,36 +96,21 @@ input::placeholder{
 
 /*********************** Home ***********************/
 
-.container {
-	margin: 32px 16px 0 16px;
-}
+.increment-box { 
 
-.home{
-	margin-right: 13px;
-}
-
-.email {
-	font-weight: bold;
-	margin-top: 3px;
-}
-
-.home-email {
-	display: flex;
-}
-
-.increment-box {
 	/* spécificité de la boite */
 	width: 24px;
 	height: 24px;
 	border-radius: 3px;
 	background-color: #FF7675;
-
+	
 
 	/* specificité du texte à l'intérieur de la boîte */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: white;
+	margin-right : 16px;
 }
 
 .nav-list {
@@ -149,6 +134,7 @@ input::placeholder{
 	margin-bottom: 24px;
 	font-size: 16px;
 }
+
 
 
 /***************************** listDetails *********************************/
@@ -338,6 +324,15 @@ textarea{
 	.rectangle_settings p
 	{
 	color : #FFFFFF;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: 0em;
+	text-align: left;
+	padding-top : 17px;
+	padding-bottom : 16px;
+
 	}	
 
 	.settings
@@ -379,6 +374,7 @@ textarea{
 	{
 	display : grid;	
 	grid-template-columns :max-content;
+	height : 100%;
 	}
 
 
@@ -397,8 +393,9 @@ textarea{
 		grid-column: 1;
 		background-color: #F5F5F5;
 		position : relative;
-		padding-left : 16px;
-		
+		margin-left : 16px;	
+		margin-right : 16px;	
+
 	}
 
 	.sidebar h1
@@ -417,7 +414,6 @@ textarea{
 
 	.sidebar ul{
 		margin-left : 0px;
-
 	}
 	
 	.desktop-grid
@@ -434,12 +430,6 @@ textarea{
 		padding-top : 28px;
 	}
 	
-	.settings-line{
-		border: 1px solid #ADADAD;
-		width : 176px;
-		height : 0px;
-	}
-
 	.lists_and_line
 	{
 		display : grid;
@@ -451,6 +441,7 @@ textarea{
 
 	.sidebar ul{
 		padding-left : 0px;
+		display : grid;
 	}
 
 	.settings_and_deco
