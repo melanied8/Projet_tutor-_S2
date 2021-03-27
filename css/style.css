@@ -17,16 +17,22 @@ button, input::placeholder, body {
 	font-family: 'Roboto', sans-serif;
 }
 
-/* Reste a régler le problème e centrage du bloc ! */
-.center-div {
+/* Reste a régler le problème de centrage du bloc ! */
+
+.login {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 }
 
-.label {
-	display: block;
+label {
 	margin-bottom: 8px;
+}
+
+input {
+	margin-bottom: 24px;
+	text-indent: 1em;
+	margin-bottom: 24px;
+	padding: 0;
 }
 
 
@@ -38,15 +44,12 @@ input::placeholder{
 .box-model {
 	box-sizing: border-box;
 	border : 1px solid #ADADAD;
-	width: 350px;
+	width: 100%;
 	height: 48px;
 	border-radius: 4px;
 }
 
 .button {
-	/*
-	background-color: #FF7675;
-	*/
 	color: white;
 	border : none;
 	display: flex;
@@ -54,16 +57,14 @@ input::placeholder{
 	justify-content: center;
 }
 
-.login input {
-	text-indent: 1em;
-	margin-bottom: 24px;
-	padding: 0;
+.pink {
+	background-color: #FF7675;
 }
+
 
 .login a {
 	text-decoration: none;
 	color :#FF7675;
-	display: block;
 	margin-top: 32px;
 	text-align: center;
 }
@@ -133,6 +134,10 @@ input::placeholder{
 
 /***************************** listDetails *********************************/
 
+.list-details {
+	width : 375px;
+}
+
 .header {
 	font-size: 18px;
 	font-weight: 500;
@@ -143,6 +148,10 @@ input::placeholder{
 	display: flex;
 	align-items: center;
 	margin-bottom: 24px;
+}
+
+.line {
+	border-top : 1px solid #BDBDBD;
 }
 
 .menu {
@@ -162,6 +171,7 @@ input::placeholder{
 
 .nav-box {
 	width: 375px;
+	border-bottom: 1px solid #BDBDBD;
 }
 
 .flex-item {
@@ -196,13 +206,18 @@ input::placeholder{
 
 /*Side-bar */
 
+.flex {
+	display: flex;
+}
+
 .sb-wrapper {
 	margin: 0 16px;
 }
 
 .position {
 	width: 350px;
-	position: absolute;
+	position: fixed;
+	left: -0px;
 }
 
 .sb-form {
