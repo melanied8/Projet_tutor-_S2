@@ -10,13 +10,16 @@
 	<div class="sb-wrapper position">
 		<img class="close" src="./assets/close.svg" />
 		<form class="sb-form">
+			<div class="sb-box">
 			<label class="title">Titre</label>
-			<input class="sb-box little" type="text" name="title">
+			<input class="sb-box-model little" type="text" name="title">
+			</div>
 
+			<div class="sb-box">
 			<title class="step">Etapes</title>
 			<ul class="nav-list">
 				<li>
-					<div class="sb-box little flex-item space-between">
+					<div class="sb-box-model little flex-item space-between">
 						<div class="flex-item">
 							<input class="radio-size" type="radio" name="radio">
 							<label>Aller sur github.com</label>
@@ -24,21 +27,28 @@
 						<img class="remove" src="./assets/remove.svg">
 					</div>
 				</li>
-				<li>
-					<div class="sb-box flex-item little">
-						<input class="sb-box" type="text" name="new-step" placeholder="Nouvelle etape">
-						<img src="./assets/plus.svg">
-					</div>
+				<li class="sb-box-model little flex-item space-between">
+					<input type="text" name="new-step" placeholder="Nouvelle etape">
+					<img src="./assets/plus.svg">
 				</li>
 			</ul>
+			</div>
+
 			
 			
+	<div class="sb-box">
 	<label class="dead-line">Echeance</label>
-	<input class="sb-box" type="date" name="date">
-	<label class="notes">Notes</label>
-	<input class="sb-box big" type="text" name="notes" placeholder="Quelques détails à propos de cette tache...">
-	<button type="submit">Enregistrer</button>
-	<button type="#">Annuler</button>
+	<input class="sb-box-model" type="date" name="date">
+	</div>
+
+	<div class="sb-box">
+	<label class="notes">Note</label>
+	<textarea class="sb-box-model big" name="notes" placeholder="Quelques details à propos de cette tache..."></textarea>
+</div>
+	<div class="sb-button">
+	<button class="sb-button-box button" type="submit">Enregistrer</button>
+	<button class="sb-button-box button" type="#">Annuler</button>
+	</div>
 	</form>
 </div>
 

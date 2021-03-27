@@ -44,7 +44,9 @@ input::placeholder{
 }
 
 .button {
+	/*
 	background-color: #FF7675;
+	*/
 	color: white;
 	border : none;
 	display: flex;
@@ -208,13 +210,9 @@ input::placeholder{
 	top: 56px;
 }
 
-.sb-form label {
-}
 
-.sb-form input {
-}
-
-.sb-box {
+.sb-box-model {
+	margin-top: 8px;
 	width: 318px;
 	height: 48px;
 	box-sizing: border-box;
@@ -252,5 +250,39 @@ input[name="new-step"] {
 .sb-form input[type="radio"] {
 	margin: 0 19.48px 0 8px;
 }
+
+input[name="new-step"] + img {
+	margin-right: 12px;
+}
+
+.sb-box {
+	margin-bottom: 24px;
+}
+
+.sb-button {
+	display: flex;
+}
+
+.sb-button-box {
+	height: 48px;
+	width: 146px;
+	border-radius: 4px;
+	margin-bottom: 44px;
+}
+
+.sb-button :first-child {
+	background: #FF7675;
+	margin-right: 26px;
+}
+
+.sb-button :last-child {
+	background: #BDBDBD
+}
+
+textarea{
+ resize:none;
+}
+
+
 
 
