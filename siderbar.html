@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<title>Side-bar (temporaire)</title>
 </head>
 <body>
+	<div class="flex">
+	<div class="details-list">
+		<header class="header">
+			<img class="menu" src="./assets/menu.svg" />
+			<h1>Projet Tuteuré</h1>
+		</header>
+		<ul class="nav-list line">
+			<li class="nav-box flex-item space-between">
+				<div class="flex-item item-title">
+					<input class="radio-size radio" type="radio" name="radio" id="radio">
+						<label for="radio">Créer un repository sur git</label>	
+				</div>
+				<img class="delete" src="./assets/delete.svg">
+			</li>
+			<li class="nav-box">
+				<a class="flex-item" href="#">
+					<img class="plus" src="./assets/plus.svg" />
+					Créer un composant "navigation"
+				</a>
+			</li>
+		</ul>
+	</div>
 	<div class="sb-wrapper position">
 		<img class="close" src="./assets/close.svg" />
 		<form class="sb-form">
@@ -37,7 +60,7 @@
 			
 			
 	<div class="sb-box">
-	<label class="dead-line">Echeance</label>
+	<label class="dead-line">Echéance</label>
 	<input class="sb-box-model" type="date" name="date">
 	</div>
 
@@ -50,6 +73,7 @@
 	<button class="sb-button-box button" type="#">Annuler</button>
 	</div>
 	</form>
+</div>
 </div>
 
 
