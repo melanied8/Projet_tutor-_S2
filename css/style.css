@@ -14,19 +14,19 @@ li {
 	list-style-type: none;
 }
 
-p {
+p, h2 {
 	margin: 0;
 }
 
 
 /*************************** Login & Signup *************************/
 
-.login-wrapper, .signup-wrapper, .fp-wrapper {
+.login-wrapper, .signup-wrapper, .fp-wrapper, .up-wrapper {
 	width: 100%;
 	height: 100%;
 }
 
-.login, .signup, .fp {
+.login, .signup, .fp, .update {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -34,7 +34,7 @@ p {
 	padding: 0 13px 0 12px;
 }
 
-.login label, .signup label, .fp label{
+.login label, .signup label, .fp label, .update label {
 	margin-bottom: 8px;
 }
 
@@ -42,7 +42,7 @@ input {
 	text-indent: 1em;
 }
 
-.login input, .signup input, .fp input {
+.login input, .signup input, .fp input, .update input {
 	margin-bottom: 24px;
 }
 
@@ -83,18 +83,14 @@ input::placeholder{
 
 
 @media screen and (min-width: 375px) {
-	.login-wrapper, .signup-wrapper, .fp-wrapper {
+	.login-wrapper, .signup-wrapper, .fp-wrapper, .up-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
-<<<<<<< HEAD
 	
-	.login, .signup {
-=======
 
-	.login, .signup, .fp {
->>>>>>> 8b5fbea192722f85a1ceb3a52f5c556b29a0f155
+	.login, .signup, .fp, .update {
 		width: 375px;
 	}
 }
@@ -218,6 +214,7 @@ input::placeholder{
 	.delete-forever {
 		display: none;
 	}
+
 }
 
 
@@ -260,103 +257,8 @@ input::placeholder{
 	.list-details .nav-list {
 		padding: 0 16px 0 19px;
 	}
-}
 
-/*Side-bar */
-
-.flex {
-	display: flex;
-}
-
-.sb-wrapper {
-	margin: 0 16px;
-}
-
-.position {
-	width: 350px;
-	position: fixed;
-	left: -0px;
-}
-
-.sb-form {
-	position: absolute;
-	top: 56px;
-}
-
-
-.sb-box-model {
-	margin-top: 8px;
-	width: 318px;
-	height: 48px;
-	box-sizing: border-box;
-	border : 1px solid #ADADAD;
-	border-radius: 4px;
-}
-
-.little {
-	height: 48px;
-}
-
-.big {
-	height: 128px;
-}
-
-input[name="new-step"] {
-	border : none;
-}
-
-.close {
-	position: absolute;
-	right: 21px;
-	top: 21px;
-}
-
-.dead-line {
-	margin-top: 8px;
-	margin-bottom: 24px;
-}
-
-.remove {
-	margin-right: 17px;
-}
-
-.sb-form input[type="radio"] {
-	margin: 0 19.48px 0 8px;
-}
-
-input[name="new-step"] + img {
-	margin-right: 12px;
-}
-
-.sb-box {
-	margin-bottom: 24px;
-}
-
-.sb-button {
-	display: flex;
-}
-
-.sb-button-box {
-	height: 48px;
-	width: 146px;
-	border-radius: 4px;
-	margin-bottom: 44px;
-}
-
-.sb-button :first-child {
-	background: #FF7675;
-	margin-right: 26px;
-}
-
-.sb-button :last-child {
-	background: #BDBDBD
-}
-
-textarea{
- resize:none;
-}
-
-.listDetails-desktop-grid
+	.listDetails-desktop-grid
 {
 	grid-column: 2;
 }
@@ -366,6 +268,9 @@ textarea{
 	padding-top: 32px;
 	padding-left : 19px;
 }
+
+}
+
 
 /***************************** Settings *********************************/
 
