@@ -12,12 +12,6 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="sidebar">
-			<img src="./assets/home.svg">
-			<div class = "lists_and_line">
-				<h1>Mes listes</h1>
-			<div class="settings-line"></div>
-		</div>
 	<div class="sidebar">
 	<img src="./assets/home.svg">
 	<div class = "lists_and_line">
@@ -34,14 +28,6 @@
 	<div class = "settings_and_deco">
 	<img src="./assets/settings.svg">
 	<a href="settings.html">Paramètres</a>
-
-		<ul>
-			<li><img src="./assets/plus.svg">Nouvelle liste</li>
-		</ul>
-	
-		<div class = "settings_and_deco">
-			<img src="./assets/settings.svg">
-		<label>Paramètres</label>
 	<img src="./assets/logout.svg">
 	<a href="login.html">Déconnexion</a>
 	</div>
@@ -58,14 +44,14 @@
 
 <div class = "settings">
 
-<h2>Adresse e-mail</h2>
-<p>Adresse e-mail actuelle : </p>
+<div class ="settings-h2-mail"><h2>Adresse e-mail</h2></div>
+<div class = "settings-actual-mail"><p>Adresse e-mail actuelle : </p> </div>
 <!-- Mettre le $_SESSION['login'] -->
 <form action="#" method="POST">
 <label>Nouvelle adresse e-mail</label>
-<input class="box-model" type="email" name="email" placeholder="mail@provider.com">
+<input class="box-model" type="email" name="new_email" placeholder="mail@provider.com">
 <label>Confirmer l'adresse e-mail</label>
-<input class="box-model" type="email" name="email_confirmation" placeholder="mail@provider.com">
+<input class="box-model" type="email" name="new_email_confirmation" placeholder="mail@provider.com">
 <button class="button box-model" type="submit">Modifier l'adresse e-mail</button>
 </form>
 

@@ -223,9 +223,18 @@ input::placeholder{
 		display: none;
 	}
 
+<<<<<<< HEAD
 	.delete-forever {
 		display: none;
 	}
+=======
+	.listDetails-desktop-grid h2
+{
+font-size: 18px;
+font-weight: 500;
+}
+
+>>>>>>> 5b33ce69eb9a71d9aaea32a909593e27063171b4
 
 }
 
@@ -261,6 +270,7 @@ input::placeholder{
 		padding: 0 16px 0 19px;
 	}
 
+<<<<<<< HEAD
 	.listDetails-desktop-grid{
 		grid-column: 2;
 	}
@@ -347,7 +357,70 @@ input::placeholder{
 
 
 
+=======
+	.listDetails-desktop-grid
+	{
+	grid-column: 2;
+	}
 
+	.listDetails-desktop-grid h2
+	{
+		padding-left : 19px;
+		margin-top : 32px;
+	}
+
+
+	
+}
+
+/*Side-bar */
+
+.flex {
+	display: flex;
+}
+>>>>>>> 5b33ce69eb9a71d9aaea32a909593e27063171b4
+
+.sb-wrapper {
+	margin: 0 16px;
+}
+
+.position {
+	width: 350px;
+	position: fixed;
+	left: -0px;
+}
+
+.sb-form {
+	position: absolute;
+	top: 56px;
+}
+
+
+.sb-box-model {
+	margin-top: 8px;
+	width: 318px;
+	height: 48px;
+	box-sizing: border-box;
+	border : 1px solid #ADADAD;
+	border-radius: 4px;
+}
+
+.little {
+	height: 48px;
+}
+
+.big {
+	height: 128px;
+}
+
+input[name="new-step"] {
+	border : none;
+}
+
+.close {
+	position: absolute;
+	right: 21px;
+	top: 21px;
 }
 
 
@@ -394,6 +467,12 @@ input::placeholder{
 	.sidebar
 	{
 		display: none;
+	}
+
+	.desktop-grid .settings-h2-mail
+	{
+		padding-top: 16px;
+		padding-bottom: 16px;
 	}
 }
 
@@ -442,7 +521,7 @@ input::placeholder{
 		grid-column: 1;
 		background-color: #F5F5F5;
 		position : relative;
-		margin-left : 16px;	
+		padding-left : 16px;	
 		margin-right : 16px;	
 
 	}
@@ -477,6 +556,11 @@ input::placeholder{
 	.desktop-grid h2
 	{
 		padding-top : 28px;
+	}
+
+	.desktop-grid .settings-actual-mail
+	{
+		padding-top: 16px;
 	}
 	
 	.lists_and_line
