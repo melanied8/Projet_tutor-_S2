@@ -4,10 +4,18 @@ html {
 	font-family: 'Roboto', sans-serif;
 }
 
+textarea{
+	resize: none;
+}
+
 
 body {
 	height: 100%;
 	margin : 0;
+}
+
+a {
+	text-decoration: none;
 }
 
 li {
@@ -215,6 +223,10 @@ input::placeholder{
 		display: none;
 	}
 
+	.delete-forever {
+		display: none;
+	}
+
 }
 
 
@@ -229,21 +241,12 @@ input::placeholder{
 		margin-bottom: 75px;
 	}
 
-	.header p {
-		font-weight: 700;
-		font-size: 32px;
-		padding: 32px 0 0 32px;
-	}
-
 
 	.delete-forever {
 		width: 198px;
 		height: 48px;
 		background-color: #D63031;
 		color: white;
-		position: absolute;
-		right: 28px;
-		top: 27px;
 		border-radius: 3px;
 		display: flex;
 		justify-content: center;
@@ -258,16 +261,92 @@ input::placeholder{
 		padding: 0 16px 0 19px;
 	}
 
-	.listDetails-desktop-grid
-{
-	grid-column: 2;
-}
+	.listDetails-desktop-grid{
+		grid-column: 2;
+	}
 
-.listDetails-desktop-grid h2
-{
-	padding-top: 32px;
-	padding-left : 19px;
-}
+	.listDetails-desktop-grid h2 {
+		padding-top: 32px;
+		padding-left : 19px;
+	}
+
+	.edit {
+		background-color: #F5F5F5;
+		grid-column: 3;
+		width: 300px;
+		padding: 32px 16px 0 16px;
+	}
+
+	.close {
+		display: none;
+	}
+
+	.edit-form {
+		display: grid;
+		grid-row-gap: 24px;
+	}
+
+	.form-item, .form-item .nav-list {
+		display: grid;
+		grid-row-gap: 8px;
+	}
+
+	.edit-box {
+		background: #FFFFFF;
+		width: 268px;
+		height: 48px;
+		box-sizing: border-box;
+		border : 1px solid #ADADAD;
+		border-radius: 4px;
+	}
+
+	.form-item textarea {
+		width: 268px;
+		height: 128px;
+		border: 1px solid #ADADAD;
+		border-radius: 4px;
+	}
+
+	.edit input[type="radio"] {
+		margin-left: 8px;
+		margin-right: 12px;
+	}
+
+	.step, .new-step {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.edit-button {
+		display: flex;
+	}
+
+	.edit-button button {
+		font-weight: 500;
+		font-style: normal;
+		color: #FFFFFF;
+		border :none;
+		width: 126px;
+		height: 48px;
+		border-radius: 4px;
+	}
+
+	.edit-button button:first-child {
+		margin-right: 16px;
+	}
+
+	.grey {
+		background: #BDBDBD;
+	}
+
+	.list-details a {
+		color: #9E9E9E;
+	}
+
+
+
+
 
 }
 
