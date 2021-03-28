@@ -235,9 +235,7 @@ input::placeholder{
 	.header p {
 		font-weight: 700;
 		font-size: 32px;
-		position: absolute;
-		top: 32px;
-		left: 32px;
+		padding: 32px 0 0 32px;
 	}
 
 
