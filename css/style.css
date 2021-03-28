@@ -262,6 +262,8 @@ input::placeholder{
 	.list-details .nav-list {
 		padding: 0 16px 0 19px;
 	}
+
+	
 }
 
 /*Side-bar */
@@ -460,7 +462,7 @@ textarea{
 		grid-column: 1;
 		background-color: #F5F5F5;
 		position : relative;
-		margin-left : 16px;	
+		padding-left : 16px;	
 		margin-right : 16px;	
 
 	}
