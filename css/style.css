@@ -220,13 +220,95 @@ input::placeholder{
 		display: none;
 	}
 
-	.delete-forever {
-		display: none;
+	.shadow {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.4);
+		width: 6.7%;
+		height: 100%;
 	}
 
 	.edit {
+		position: fixed;
+		top: 0;
+		right: 0;
+		background-color: #FFFFFF;
+		width: 93%;
+		height: 100%;
+	}
+
+	.close {
+		position: absolute;
+		top: 21px;
+		right: 21px;
+	}
+
+	.edit-form {
+		padding: 56px 16px 0 16px;
+	}
+
+	.style-box {
+		background: #FFFFFF;
+		box-sizing: border-box;
+		border : 1px solid #ADADAD;
+		border-radius: 4px;
+	}
+
+	.remove-desktop {
 		display: none;
 	}
+
+	.edit-box {
+		width: 91%;
+		height: 48px;
+	}
+
+	.step, .new-step {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.edit-form {
+		display: grid;
+		grid-row-gap: 24px;
+	}
+
+	.form-item, .form-item .nav-list {
+		display: grid;
+		grid-row-gap: 8px;
+	}
+
+	.form-item textarea {
+		box-sizing: border-box;
+		width: 91%;
+		height: 128px;
+		border: 1px solid #ADADAD;
+		border-radius: 4px;
+	}
+
+
+	.edit-button {
+		display: flex;
+	}
+
+	.edit-button button {
+		font-weight: 500;
+		font-style: normal;
+		color: #FFFFFF;
+		border :none;
+		width: 41.7%;
+		height: 48px;
+		border-radius: 4px;
+	}
+
+	.edit-button button:first-child {
+		margin-right: 7.4%;
+	}
+
+
+
 
 }
 
@@ -286,64 +368,9 @@ input::placeholder{
 		display: none;
 	}
 
-	.edit-form {
-		display: grid;
-		grid-row-gap: 24px;
-	}
-
-	.form-item, .form-item .nav-list {
-		display: grid;
-		grid-row-gap: 8px;
-	}
-
-	.edit-box {
-		width: 268px;
-		height: 48px;
-	}
-
-	.style-box {
-		background: #FFFFFF;
-		box-sizing: border-box;
-		border : 1px solid #ADADAD;
-		border-radius: 4px;
-	}
-
-	.step-box  {
-		width: 244px;
-		height: 48px;
-	}
-
-	.form-item textarea {
-		box-sizing: border-box;
-		width: 268px;
-		height: 128px;
-		border: 1px solid #ADADAD;
-		border-radius: 4px;
-	}
-
 	.edit input[type="radio"] {
 		margin-left: 8px;
 		margin-right: 12px;
-	}
-
-	.step, .new-step {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	.edit-button {
-		display: flex;
-	}
-
-	.edit-button button {
-		font-weight: 500;
-		font-style: normal;
-		color: #FFFFFF;
-		border :none;
-		width: 126px;
-		height: 48px;
-		border-radius: 4px;
 	}
 
 	.dead-line {
@@ -351,9 +378,7 @@ input::placeholder{
 		padding-right: 11.33px;
 	}
 
-	.edit-button button:first-child {
-		margin-right: 16px;
-	}
+	
 
 	.grey {
 		background: #BDBDBD;
