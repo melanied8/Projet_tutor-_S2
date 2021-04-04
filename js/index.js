@@ -1,23 +1,21 @@
-import "../css/style.css"
+import "./style.css"
+import {initApp} from "./app"
+
+const itemAddElement = document.querySelector(".add-item")
+const listElement = document.querySelector(".task-list")
+
+initApp(itemAddElement, listElement)
 
 
 const sideBar = document.querySelector(".edit")
 const closeButton = document.querySelector(".close")
-const openLink = document.querySelector(".open-link")
 const cancelButton = document.querySelector(".cancel-button")
 
 const close = () => {
 	sideBar.classList.remove("open-link")
 }
 
-const open = () => {
-	sideBar.classList.add("open-link")
-}
-
 closeButton.addEventListener("click", close)
-openLink.addEventListener("click", open)
 cancelButton.addEventListener("click", close)
-
-
 
 

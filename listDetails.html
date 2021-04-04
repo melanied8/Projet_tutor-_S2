@@ -22,9 +22,7 @@
 			</div>
 	
 			<ul class="nav-list">
-				<li class="nav-list-item">To do today<div class="increment-box">2</div></li>
-				<li class="nav-list-item">Stage<div></div></li>
-				<li class="new-list"><img class="plus" src="./assets/plus.svg">Nouvelle liste</li>
+				<li class="new-list"><button type="button"><img class="plus" src="./assets/plus.svg"></button>Nouvelle liste</li>
 			</ul>
 		
 			<div class = "settings_and_deco">
@@ -45,17 +43,10 @@
 						Supprimer la liste
 					</div>
 				</header>
-				<ul class="nav-list">
-					<li class="nav-box flex-item item-size space-between">
-						<div class="flex-item">
-							<input class="radio-size radio" type="radio" name="radio" id="radio">
-							<label  for="radio"><a class="open-link" href="#">Créer un repository sur git</a></label>	
-						</div>
-						<img class="delete" src="./assets/delete.svg">
-					</li>
-					<li class="item-size flex-item">
-							<button><img class="plus" src="./assets/plus.svg" /></button>
-							<input type="text" name="" placeholder="Ajouter une tâche...">
+				<ul class="task-list nav-list">
+					<li class="item-size flex-item add-item">
+							<button type="button" class="js-task-button"><img class="plus" src="./assets/plus.svg" /></button>
+							<input class="js-task-input" type="text" name="" placeholder="Ajouter une tâche...">
 					</li>
 				</ul>
 			</div>
