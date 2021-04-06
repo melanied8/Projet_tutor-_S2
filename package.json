@@ -4,17 +4,14 @@
   "description": "",
   "main": "listDetails.html",
   "scripts": {
-    "start": "parcel listDetails.html --open",
-    "build": "parcel build listDetails.html"
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
-  "dependencies": {
-    "parcel-bundler": "^1.6.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.2.0"
-  },
-  "resolutions": {
-    "@babel/preset-env": "7.13.8"
+    "@babel/core": "7.2.0",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
   },
   "keywords": []
 }

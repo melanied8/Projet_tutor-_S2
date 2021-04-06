@@ -58,6 +58,6 @@
 
 
 
-
+<script src="./dist/test.js"></script>
 	</body>
 </html>

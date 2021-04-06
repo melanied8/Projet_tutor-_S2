@@ -25,5 +25,6 @@
 		<a href="<?= route('/signUp')?>">Pas encore de compte ? Inscrivez-vous !</a>
 	</form>
 	</div>
+<script src="./dist/test2.js"></script>
 </body>
 </html>
