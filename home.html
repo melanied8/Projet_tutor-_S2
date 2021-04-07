@@ -15,7 +15,10 @@
 		<div class="wrapper">
 
 			<div class="sidebar">
-			<img src="./assets/home.svg">
+			<div class="close-button-and-home">
+				<button class="menu-close-button"></button>
+				<img src="./assets/home.svg">
+			</div>
 			<div class = "lists_and_line">
 			<h1>Mes listes</h1>
 			<svg class="line" width="176" height="1" viewBox="0 0 176 1" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,10 +26,14 @@
 				</svg>
 			</div>
 		
-			<ul class="nav-list">
+			<ul>
 				<li class="nav-list-item">To do today<div class="increment-box">2</div></li>
 				<li class="nav-list-item">Stage<div></div></li>
-				<li class="new-list"><img class="plus" src="./assets/plus.svg">Nouvelle liste</li>
+				<li><img src="./assets/plus.svg"><div class="new-list">Nouvelle liste</div></li>
+				<div id="write-new-list">
+				<input class="box-model" type="text" name="new_list" placeholder="Nom de la liste">
+				<button class="button box-model" type="submit">Valider la liste</button>
+				</div>
 			</ul>
 			
 			<div class = "settings_and_deco">
@@ -38,6 +45,7 @@
 			</div>
 
 
+			<!---
 			<div class = desktop-grid>
 				<div class = "rectangle_settings">
 
@@ -48,10 +56,18 @@
 				<li></li>
 			</ul>
 			</div>
+		-->
+	   
+		
 
-	    </div>
+		<div class="desktop-grid">
+				
+			<div class = "rectangle_settings">
+			<button type="button" class="menu-open-button"></button>
+			<p>Prochaines tâches</p>
+		</div>
 
-
+	</div>
 
 
 	</body>

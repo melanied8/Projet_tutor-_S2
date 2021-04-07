@@ -572,14 +572,14 @@ input::placeholder{
 
 .menu-open-button
 {
-	background: url("/assets/menu.svg");		
+	background: url("/menu.f70022a6.svg");		
 	width : 28px;
 	height : 28px;
 }
 
 .menu-close-button
 {
-	background: url("/assets/close.svg");	
+	background: url("/close.bff3a284.svg");	
 }
 
 
@@ -643,3 +643,6 @@ input::placeholder{
 	 }
 }
 
+
+
+/*# sourceMappingURL=/js.00a46daa.css.map */
