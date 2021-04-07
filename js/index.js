@@ -1,10 +1,15 @@
-import "../css/style.css"
+import "./style.css"
+import {initApp} from "./app"
+
+const itemAddElement = document.querySelector(".add-item")
+const listElement = document.querySelector(".task-list")
+
+initApp(itemAddElement, listElement)
 
 
 
 const sideBar = document.querySelector(".edit")
 const closeButton = document.querySelector(".close")
-const openLink = document.querySelector(".open-link")
 const cancelButton = document.querySelector(".cancel-button")
 
 
@@ -78,8 +83,6 @@ const closeMenu = () => {
   }
 
   newList.addEventListener("click",writeNewList)
-
-
 
 
 
