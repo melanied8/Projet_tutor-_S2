@@ -184,19 +184,146 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/style.css":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"js/style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\melan\\Desktop\\ptut\\assets\\menu.svg":[["menu.f70022a6.svg","assets/menu.svg"],"assets/menu.svg"],"C:\\Users\\melan\\Desktop\\ptut\\assets\\close.svg":[["close.bff3a284.svg","assets/close.svg"],"assets/close.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/index.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/form.js":[function(require,module,exports) {
 "use strict";
 
-require("../css/style.css");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initForm = void 0;
 
+var initForm = function initForm(itemAddElement, onSubmit) {
+  var input = itemAddElement.querySelector(".js-task-input");
+  var addButton = itemAddElement.querySelector(".js-task-button");
+
+  var init = function init() {
+    updateAddButtonStatus();
+    input.addEventListener("input", updateAddButtonStatus);
+    addButton.addEventListener("click", handleSubmit);
+  };
+
+  var updateAddButtonStatus = function updateAddButtonStatus() {
+    addButton.disabled = input.value.trim().length === 0;
+  };
+
+  var handleSubmit = function handleSubmit() {
+    var trimmedValue = input.value.trim();
+    onSubmit(trimmedValue);
+    input.value = "";
+  };
+
+  init();
+};
+
+exports.initForm = initForm;
+},{}],"js/list.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initList = void 0;
+
+var initList = function initList(listElement) {
+  var addItem = function addItem(label) {
+    var item = makeItem(label);
+    listElement.prepend(item);
+  };
+
+  return {
+    addItem: addItem
+  };
+};
+
+exports.initList = initList;
+
+var makeItem = function makeItem(label) {
+  var element = createItemElement(label);
+  var input = element.querySelector("input");
+  var button = element.querySelector("button");
+  var link = element.querySelector("a");
+
+  var init = function init() {
+    button.addEventListener("click", destroy);
+    link.addEventListener("click", open);
+  };
+
+  var destroy = function destroy() {
+    element.remove();
+    button.removeEventListener("click", destroy);
+  };
+
+  var open = function open() {
+    var sideBar = document.querySelector(".edit");
+    sideBar.classList.add("open-link");
+  };
+
+  init();
+  return element;
+};
+
+var createItemElement = function createItemElement(itemLabel) {
+  var item = document.createElement("li");
+  item.classList.add("nav-box", "flex-item", "item-size", "space-between");
+  var div = document.createElement("div");
+  div.classList.add("flex-item");
+  var input = document.createElement("input");
+  input.type = "radio";
+  input.classList.add("radio-size", "radio");
+  var label = document.createElement("label");
+  label.for = "radio";
+  var link = document.createElement("a");
+  link.classList.add("open-link");
+  link.append(itemLabel);
+  var button = document.createElement("button");
+  button.type = "button";
+  button.classList.add("delete-task");
+  var img = document.createElement("img");
+  img.classList.add("delete");
+  img.setAttribute("src", "../assets/delete.svg");
+  label.append(link);
+  div.append(input, label);
+  button.append(img);
+  item.append(div, button);
+  return item;
+  return item;
+};
+},{}],"js/app.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initApp = void 0;
+
+var _form = require("./form");
+
+var _list = require("./list");
+
+var initApp = function initApp(itemAddElement, listElement) {
+  var list = (0, _list.initList)(listElement);
+  (0, _form.initForm)(itemAddElement, list.addItem);
+  var list2 = (0, _list.initList)();
+};
+
+exports.initApp = initApp;
+},{"./form":"js/form.js","./list":"js/list.js"}],"js/index.js":[function(require,module,exports) {
+"use strict";
+
+require("./style.css");
+
+var _app = require("./app");
+
+var itemAddElement = document.querySelector(".add-item");
+var listElement = document.querySelector(".task-list");
+(0, _app.initApp)(itemAddElement, listElement);
 var sideBar = document.querySelector(".edit");
 var closeButton = document.querySelector(".close");
-var openLink = document.querySelector(".open-link");
 var cancelButton = document.querySelector(".cancel-button");
 
 var close = function close() {
@@ -255,7 +382,7 @@ var writeNewList = function writeNewList() {
 };
 
 newList.addEventListener("click", writeNewList);
-},{"../css/style.css":"css/style.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./style.css":"js/style.css","./app":"js/app.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -283,7 +410,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64113" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62410" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

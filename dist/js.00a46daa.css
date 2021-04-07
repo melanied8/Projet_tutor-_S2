@@ -220,10 +220,16 @@ input::placeholder{
 }
 
 .edit {
-	position: fixed;
+	width: 300px;
+	height: 100%;
 	display: none;
 	top: 0;
 	right: 0;
+}
+
+.edit-box {
+	width: 91%;
+	height: 48px;
 }
 
 .style-box {
@@ -242,6 +248,33 @@ input::placeholder{
 	display: block;
 }
 
+.form-item, .form-item .nav-list {
+	display: grid;
+	grid-row-gap: 8px;
+}
+
+.form-item textarea {
+	box-sizing: border-box;
+	width: 91%;
+	height: 128px;
+	border: 1px solid #ADADAD;
+	border-radius: 4px;
+}
+
+.edit-button button {
+	font-weight: 500;
+	font-style: normal;
+	color: #FFFFFF;
+	border :none;
+	width: 41.7%;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.edit-button button:first-child {
+	margin-right: 7.4%;
+}
+
 @media screen and (max-width: 768px) {
 
 	.delete-forever {
@@ -258,6 +291,7 @@ input::placeholder{
 	}
 
 	.edit {
+		position: fixed;
 		background-color: #FFFFFF;
 		width: 93%;
 		height: 100%;
@@ -278,11 +312,6 @@ input::placeholder{
 		display: none;
 	}
 
-	.edit-box {
-		width: 91%;
-		height: 48px;
-	}
-
 	.step, .new-step {
 		display: flex;
 		align-items: center;
@@ -290,40 +319,9 @@ input::placeholder{
 	}
 
 
-	.form-item, .form-item .nav-list {
-		display: grid;
-		grid-row-gap: 8px;
-	}
-
-	.form-item textarea {
-		box-sizing: border-box;
-		width: 91%;
-		height: 128px;
-		border: 1px solid #ADADAD;
-		border-radius: 4px;
-	}
-
-
 	.edit-button {
 		display: flex;
 	}
-
-	.edit-button button {
-		font-weight: 500;
-		font-style: normal;
-		color: #FFFFFF;
-		border :none;
-		width: 41.7%;
-		height: 48px;
-		border-radius: 4px;
-	}
-
-	.edit-button button:first-child {
-		margin-right: 7.4%;
-	}
-
-
-
 
 }
 
@@ -364,6 +362,7 @@ input::placeholder{
 	}
 
 	.listDetails-desktop-grid{
+		width: 100%;
 		grid-column: 2;
 	}
 
@@ -375,7 +374,6 @@ input::placeholder{
 	.edit {
 		background-color: #F5F5F5;
 		grid-column: 3;
-		width: 21%;
 		height: 100%;
 		padding: 32px 16px 0 16px;
 	}
@@ -394,8 +392,6 @@ input::placeholder{
 		padding-right: 11.33px;
 	}
 
-	
-
 	.grey {
 		background: #BDBDBD;
 	}
@@ -403,10 +399,6 @@ input::placeholder{
 	.list-details a {
 		color: #9E9E9E;
 	}
-
-
-
-
 
 }
 
@@ -478,33 +470,12 @@ input::placeholder{
 	margin-top: 32px;	
 }
 
-.settings_and_deco
-{
-	display : grid;
-	grid-template-columns: repeat(2,auto);
-	grid-gap: 13.67px;
-	justify-content: left;
-	align-items: center;
-	position: absolute;
-	bottom: 0;
-	padding-bottom : 19px;
-}
-
-.lists_and_line
-{
-	display : grid;
-	grid-template-columns: repeat(2,auto);
-	grid-gap: 18px;
-	justify-content: left;
-	align-items: center;
-}
-
-
 @media screen and (min-width: 768px) {
 	.wrapper
 	{
 	display : grid;	
 	grid-template-columns : auto 1fr;
+	width: 100%;
 	height : 100%;
 	}
 
@@ -521,6 +492,7 @@ input::placeholder{
 	{
 		padding-top: 32px;
 		width : 300px;
+		height: 100%;
 		grid-column: 1;
 		background-color: #F5F5F5;
 		position : relative;
@@ -545,10 +517,8 @@ input::placeholder{
 
 	.sidebar ul{
 		margin-left : 0px;
-		padding-left : 0px;
-		display : grid;
 	}
-
+	
 	.desktop-grid
 	{
 		grid-column: 2;
@@ -562,86 +532,35 @@ input::placeholder{
 	{
 		padding-top : 28px;
 	}
-}
-
-/*JAVASCRIPT*/
-#write-new-list
-{
-	display : none;
-}
-
-.menu-open-button
-{
-	background: url("/menu.f70022a6.svg");		
-	width : 28px;
-	height : 28px;
-}
-
-.menu-close-button
-{
-	background: url("/close.bff3a284.svg");	
-}
-
-
-@media screen and (min-width: 768px) {
-	.menu-close-button
+	
+	.lists_and_line
 	{
-		display : none;
-	}
-}
-
-@media screen and (max-width: 768px)
-{
-	.wrapper
-	{
-		position : relative;
-	}
-	.menu-close-button
-	{
-		width : 28px;
-		height : 28px;
-		margin-top : 21px;
-	}
-	.sidebar
-	{
-		position: absolute;
-		width: 90%;
-		height: 100%;
-		left: 0px;
-		top: 0px;
-		display : none;	
-		background-color: #F5F5F5;
-		padding-left : 19px;
+		display : grid;
+		grid-template-columns: repeat(2,auto);
+		grid-gap: 18px;
+		justify-content: left;
+		align-items: center;
 	}
 
-	.sidebar h1
-	{
-		font-size : 16px;
-	}
-
-	.menu-open
-	{
-		display :block;
-		grid-template-columns: auto auto;
-	}
-
-	.background_dark
-	{
-		background-color: rgba(0, 0, 0, 0.4);
-	}
-
-	.sidebar ul
-	{
-		margin-block-start : 0px;
+	.sidebar ul{
 		padding-left : 0px;
+		display : grid;
 	}
 
-	.close-button-and-home
-	 {
-		 display : grid;
-		 grid-gap : 40px;
-	 }
+	.settings_and_deco
+	{
+		display : grid;
+		grid-template-columns: repeat(2,auto);
+		grid-gap: 13.67px;
+		justify-content: left;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+		padding-bottom : 19px;
+	}
 }
+
+
 
 
 
