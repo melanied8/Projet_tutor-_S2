@@ -27,8 +27,14 @@
 				</svg>
 			</div>
 	
-			<ul class="nav-list">
-				<li class="new-list"><button type="button"><img class="plus" src="./assets/plus.svg"></button>Nouvelle liste</li>
+			<ul>
+				<li class="nav-list-item">To do today<div class="increment-box">2</div></li>
+				<li class="nav-list-item">Stage<div></div></li>
+				<li><img src="./assets/plus.svg"><div class="new-list">Nouvelle liste</div></li>
+				<div id="write-new-list">
+				<input class="box-model" type="text" name="new_list" placeholder="Nom de la liste">
+				<button class="button box-model" type="submit">Valider la liste</button>
+				</div>
 			</ul>
 		
 			<div class = "settings_and_deco">
@@ -41,6 +47,7 @@
 
 		<div class="listDetails-desktop-grid">
 			<div class="list-details">
+					<!--
 				<header class="header">
 					<img class="menu" src="./assets/menu.svg" />
 					<h2>Projet Tutoré</h2>
@@ -48,7 +55,17 @@
 						<img src="./assets/delete-forever.svg">
 						Supprimer la liste
 					</div>
-				</header>
+				</header>-->
+				<div class="desktop-grid">
+				
+					<div class = "rectangle_settings">
+					<button type="button" class="menu-open-button"></button>
+					<p>Projet tutoré</p>
+					<div class="delete-forever">
+						<img src="./assets/delete-forever.svg">
+						Supprimer la liste
+					</div>
+				</div>
 				<ul class="task-list nav-list">
 					<li class="item-size flex-item add-item">
 							<button type="button" class="js-task-button"><img class="plus" src="./assets/plus.svg" /></button>
