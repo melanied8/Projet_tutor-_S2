@@ -43,6 +43,7 @@
 			</div>
 
 
+			<!---
 			<div class = desktop-grid>
 				<div class = "rectangle_settings">
 
@@ -53,6 +54,18 @@
 				<li></li>
 			</ul>
 			</div>
+		-->
+	   
+		
+
+		<div class="desktop-grid">
+				
+			<div class = "rectangle_settings">
+			<button type="button" class="menu-open-button"></button>
+			<p>Prochaines tâches</p>
+		</div>
+
+		</div>
 
 	    </div>
 
