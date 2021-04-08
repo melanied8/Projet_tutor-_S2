@@ -1,5 +1,5 @@
 <?php
 return [
-    'uri_prefix' =>'/workspace/handler',
+    'uri_prefix' =>'/workspace/ptut/handler',
 ]
 ?>
