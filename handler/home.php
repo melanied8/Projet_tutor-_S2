@@ -18,28 +18,32 @@
 	<body>
 
 		<div class="wrapper">
-
 			<div class="sidebar">
-			<img src="./assets/home.svg"> <?php echo $_SESSION["email"] ?> 
-			<div class = "lists_and_line">
-			<h1>Mes listes</h1>
-			<svg class="line" width="176" height="1" viewBox="0 0 176 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<line x1="4.37114e-08" y1="0.5" x2="176" y2="0.500015" stroke="#ADADAD"/>
-				</svg>
-			</div>
+				<div class="home">
+					<img src="./assets/home.svg"> 
+					<span>
+						<?php echo $_SESSION["email"] ?>		
+					</span>	
+				</div> 
+				<div class = "lists_and_line">
+					<h1>Mes listes</h1>
+					<svg class="line" width="176" height="1" viewBox="0 0 176 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<line x1="4.37114e-08" y1="0.5" x2="176" y2="0.500015" stroke="#ADADAD"/>
+					</svg>
+				</div>
 		
-			<ul class="nav-list">
-				<li class="nav-list-item">To do today<div class="increment-box">2</div></li>
-				<li class="nav-list-item">Stage<div></div></li>
-				<li class="new-list"><img class="plus" src="./assets/plus.svg">Nouvelle liste</li>
-			</ul>
+				<ul class="nav-list my-lists">
+					<li class="nav-list-item">To do today<div class="increment-box">2</div></li>
+					<li class="nav-list-item">Stage<div></div></li>
+					<li class="new-list"><button type="submit" class="list-button"><img class="plus-pink" src="./assets/plus-pink.svg"></button><input type="text" name="new-list" placeholder="Nouvelle liste"></li>
+				</ul>
 			
-			<div class = "settings_and_deco">
-			<img src="./assets/settings.svg">
-			<a href="settings.php">Paramètres</a> <!-- je sais pas pk qd je met le router ça m'envoie sur un .html -->
-			<img src="./assets/logout.svg">
-			<a href="<?= route('/logout') ?>">Déconnexion</a>
-			</div>
+				<div class = "settings_and_deco">
+					<img src="./assets/settings.svg">
+					<a href="settings.php">Paramètres</a> <!-- je sais pas pk qd je met le router ça m'envoie sur un .html -->
+					<img src="./assets/logout.svg">
+					<a href="<?= route('/logout') ?>">Déconnexion</a>
+				</div>
 			</div>
 
 
@@ -58,19 +62,19 @@
 	   
 		
 
-		<div class="desktop-grid">
+			<div class="desktop-grid">
 				
-			<div class = "rectangle_settings">
-			<button type="button" class="menu-open-button"></button>
-			<p>Prochaines tâches</p>
-		</div>
+				<div class = "rectangle_settings">
+					<button type="button" class="menu-open-button"></button>
+					<p>Prochaines tâches</p>
+				</div>
 
-		</div>
+			</div>
 
 	    </div>
 
 
 
-<script src="./dist/test.js"></script>
+		<script src="./dist/app.js"></script>
 	</body>
 </html>

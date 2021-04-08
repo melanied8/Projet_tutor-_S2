@@ -1,6 +1,7 @@
 import {initForm} from "./form"
 import {initList} from "./list"
 
+console.log('hello world')
 
 export const initApp = (itemAddElement, listElement) => {
 
