@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	//Initialise the session
 	session_start();
 	require_once('../db_connect.php');
@@ -11,8 +11,8 @@
 	//The route array contains the correspondence.URI => handler.
 	$routes = require('routes.php');
 
-	function route($route) {
+	function route($routes) {
 		global $config;
-		return $config['uri_prefix'].$route;
+		return $config['uri_prefix'].$routes;
 	}
 ?>
