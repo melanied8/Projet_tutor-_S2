@@ -49,8 +49,7 @@
 <div class="desktop-grid">
 
 	<div class = "rectangle_settings">
-
-	<img src="./assets/menu.svg">
+	<button type="button" class="menu-open-button"></button>
 	<p>Paramètres</p>
 	</div>
 
