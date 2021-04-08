@@ -462,6 +462,28 @@ input::placeholder{
 	margin-top: 32px;	
 }
 
+.settings_and_deco
+{
+	display : grid;
+	grid-template-columns: repeat(2,auto);
+	grid-gap: 13.67px;
+	justify-content: left;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	padding-bottom : 19px;
+}
+
+.lists_and_line
+{
+	display : grid;
+	grid-template-columns: repeat(2,auto);
+	grid-gap: 18px;
+	justify-content: left;
+	align-items: center;
+}
+
+
 @media screen and (min-width: 768px) {
 	.wrapper
 	{
@@ -507,8 +529,10 @@ input::placeholder{
 
 	.sidebar ul{
 		margin-left : 0px;
+		padding-left : 0px;
+		display : grid;
 	}
-	
+
 	.desktop-grid
 	{
 		grid-column: 2;
@@ -522,30 +546,83 @@ input::placeholder{
 	{
 		padding-top : 28px;
 	}
-	
-	.lists_and_line
-	{
-		display : grid;
-		grid-template-columns: repeat(2,auto);
-		grid-gap: 18px;
-		justify-content: left;
-		align-items: center;
-	}
+}
 
-	.sidebar ul{
-		padding-left : 0px;
-		display : grid;
-	}
+/*JAVASCRIPT*/
+#write-new-list
+{
+	display : none;
+}
 
-	.settings_and_deco
+.menu-open-button
+{
+	background: url("/assets/menu.svg");		
+	width : 28px;
+	height : 28px;
+}
+
+.menu-close-button
+{
+	background: url("/assets/close.svg");	
+}
+
+
+@media screen and (min-width: 768px) {
+	.menu-close-button
 	{
-		display : grid;
-		grid-template-columns: repeat(2,auto);
-		grid-gap: 13.67px;
-		justify-content: left;
-		align-items: center;
+		display : none;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	.wrapper
+	{
+		position : relative;
+	}
+	.menu-close-button
+	{
+		width : 28px;
+		height : 28px;
+		margin-top : 21px;
+	}
+	.sidebar
+	{
 		position: absolute;
-		bottom: 0;
-		padding-bottom : 19px;
+		width: 90%;
+		height: 100%;
+		left: 0px;
+		top: 0px;
+		display : none;	
+		background-color: #F5F5F5;
+		padding-left : 19px;
 	}
+
+	.sidebar h1
+	{
+		font-size : 16px;
+	}
+
+	.menu-open
+	{
+		display :block;
+		grid-template-columns: auto auto;
+	}
+
+	.background_dark
+	{
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	.sidebar ul
+	{
+		margin-block-start : 0px;
+		padding-left : 0px;
+	}
+
+	.close-button-and-home
+	 {
+		 display : grid;
+		 grid-gap : 40px;
+	 }
 }
