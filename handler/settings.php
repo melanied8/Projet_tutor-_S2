@@ -21,30 +21,7 @@
 <body>
 	<div class="wrapper">
 
-	<div class="sidebar">
-	<p><img src="./assets/home.svg"><?php echo $_SESSION["email"] ?> 
-	<div class = "lists_and_line">
-	<h1>Mes listes</h1>
-	<div class="settings-line"></div>
-	</div>
-
-	<ul>
-		<li class="nav-list-item">To do today<div class="increment-box">2</div></li>
-		<li class="nav-list-item">Stage<div></div></li>
-		<li><img src="./assets/plus.svg"><div class="new-list"><!--<a href="process_addList.php">-->Nouvelle liste</div></li>
-		<div id="write-new-list">
-		<input class="box-model" type="text" name="new_list" placeholder="Nom de la liste">
-		<button class="button box-model" type="submit">Valider la liste</button>
-		</div>
-	</ul>
-	
-	<div class = "settings_and_deco">
-	<img src="./assets/settings.svg">
-	<label> <a href="settings.php">Paramètres</a></label>
-	<img src="./assets/logout.svg">
-	<label><a href="logout.php">Déconnexion</a></label>
-	</div>
-	</div>
+	<?php include('sidebar_menu.php') ?>
 
 <div class="desktop-grid">
 
@@ -93,6 +70,7 @@
 
 </div>
 
-
+<script type="module" src="./dist/app.js"></script>
 </body>
 </html>
+
