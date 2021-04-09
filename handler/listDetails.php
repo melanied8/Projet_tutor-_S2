@@ -18,32 +18,8 @@
 
 <body>	
 	<div class="wrapper">
-		<div class="sidebar">
-			<img src="./assets/home.svg">
-			<div class = "lists_and_line">
-				<h1>Mes listes</h1>
-				<svg class="line" width="176" height="1" viewBox="0 0 176 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<line x1="4.37114e-08" y1="0.5" x2="176" y2="0.500015" stroke="#ADADAD"/>
-				</svg>
-			</div>
-	
-			<ul>
-				<li class="nav-list-item">To do today<div class="increment-box">2</div></li>
-				<li class="nav-list-item">Stage<div></div></li>
-				<li><img src="./assets/plus.svg"><div class="new-list">Nouvelle liste</div></li>
-				<div id="write-new-list">
-				<input class="box-model" type="text" name="new_list" placeholder="Nom de la liste">
-				<button class="button box-model" type="submit">Valider la liste</button>
-				</div>
-			</ul>
-		
-			<div class = "settings_and_deco">
-				<img src="./assets/settings.svg">
-				<a href="settings.html">Paramètres</a>
-				<img src="./assets/logout.svg">
-				<a href="login.html">Déconnexion</a>
-			</div>
-		</div>
+
+	<?php include('sidebar_menu.php') ?>;
 
 		<div class="listDetails-desktop-grid">
 			<div class="list-details">
@@ -121,5 +97,8 @@
 			</form>
 		</div>
 	</div>
+
+<script type="module" src="./dist/app.js"></script>
 </body>
 </html>
+
