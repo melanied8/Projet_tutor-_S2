@@ -21,7 +21,7 @@
                 //If the login exist, vérif = false
                 $verif = false;
 
-                header("Location: signUp.php");
+                header("Location: signUp");
                 exit();    
             }
             else
@@ -35,7 +35,7 @@
                 if( $_POST["confirm_password"] != $_POST["password"])
                 {
                     $_SESSION["msg_register"] = "erreur sur le mot de passe";
-                    header("Location: signUp.php");
+                    header("Location: signUp");
                     exit();    
                 } else
                 {
@@ -57,7 +57,7 @@
                     $_SESSION["msg_register"] = "Nouvel enregistrement créé avec succès";
                 }    
 
-                header("Location: login.php");
+                header("Location: login");
                 exit();        
 
             }
