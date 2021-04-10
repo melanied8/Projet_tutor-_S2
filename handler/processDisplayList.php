@@ -1,3 +1,11 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./handler/css/style.css" />
+	</head>
+</html>
+
 <?php
 	$stmt =$db->prepare("SELECT id FROM users WHERE email= :email"); 
 	$stmt-> execute(['email' => $_SESSION["email"]]);
@@ -14,16 +22,11 @@
 	$lesLists = $list-> fetchAll(PDO::FETCH_ASSOC);
 	foreach($lesLists as $row) 
 	{ 
-        $idlist = $row['idList']
         ?>
-        <ul>
 		<li><a href ="listDetails">
         <?php 
         echo $row["name"]." "; 
-        echo $row['idList'];
         ?></a> 
-        <a href="<?= route('/processDeleteList') ?>"><img src="./assets/delete.svg"> </a></li>
-		</ul>
         <?php 
     }
 }

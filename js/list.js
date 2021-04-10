@@ -76,7 +76,7 @@ const createItemElement = (itemLabel) => {
   return item
 }
 
-const addItemToDb(label, url) {
+const addItemToDb = (label, url) => {
 
            const options = {
                method: 'POST',

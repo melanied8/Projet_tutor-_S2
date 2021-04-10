@@ -27,8 +27,8 @@
 	
 	<div class = "settings_and_deco">
 	<img src="./assets/settings.svg">
-	<label> <a href="settings.php">Paramètres</a></label>
+	<label> <a href="<?= route('/settings') ?>">Paramètres</a></label>
 	<img src="./assets/logout.svg">
-	<label><a href="logout.php">Déconnexion</a></label>
+	<label><a href="<?= route('/logout') ?>">Déconnexion</a></label>
 	</div>
 	</div>

@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 			//If the login exist, vérif = false
 			$verif = false;
 
-			header("Location: FormulaireAjoutDeListeExample");
+			header("Location: home");
 			exit();    
 		}
 		else {
@@ -38,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 			$usersId = $sql-> fetchAll(PDO::FETCH_ASSOC);
 			foreach($usersId as $row) {
 			$id = $row["id"];
-			//echo "id cua nguoi dung: " . $ID."<br/>"; =>> vérifié le id de utilisateur
 		}
 
 			//on ajoute le nom de la liste à la base de donnée

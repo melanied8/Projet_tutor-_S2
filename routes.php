@@ -20,6 +20,7 @@ return [
   '/processAddList' => 'processAddList',
   '/processDeleteList' => 'processDeleteList',
    '/sidebar_menu' => 'sidebar_menu',
+   '/processDisplayList' => 'processDisplaysList',
   
 ];
 

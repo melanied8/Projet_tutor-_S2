@@ -32,7 +32,7 @@
 
                     $_SESSION["msg_addList"] = "Nouvelle tache a été ajoutée avec succés";
 
-                    header("Location: FormulaireAjoutDeTachesExample");
+                    header("Location: home");
                     exit();   
         }
     }
