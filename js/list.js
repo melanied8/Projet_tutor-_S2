@@ -72,6 +72,5 @@ const createItemElement = (itemLabel) => {
   item.append(div, button)
 
   return item
-
-  return item
 }
+

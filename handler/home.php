@@ -20,7 +20,7 @@
 	<div class="wrapper">
 
 			
-			<?php include('sidebar_menu.php'); ?>
+			<?php include('sidebar_menu.php') ?>
 
 
 			<!---

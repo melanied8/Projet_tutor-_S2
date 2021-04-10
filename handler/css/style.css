@@ -262,6 +262,62 @@ input::placeholder{
 	text-indent: 0em;
 }
 
+.edit {
+	width: 300px;
+	height: 100%;
+	display: none;
+	top: 0;
+	right: 0;
+}
+
+.edit-box {
+	width: 91%;
+	height: 48px;
+}
+
+.style-box {
+	background: #FFFFFF;
+	box-sizing: border-box;
+	border : 1px solid #ADADAD;
+	border-radius: 4px;
+}
+
+.edit-form {
+	display: grid;
+	grid-row-gap: 24px;
+}
+
+.open-link {
+	display: block;
+}
+
+.form-item, .form-item .nav-list {
+	display: grid;
+	grid-row-gap: 8px;
+}
+
+.form-item textarea {
+	box-sizing: border-box;
+	width: 91%;
+	height: 128px;
+	border: 1px solid #ADADAD;
+	border-radius: 4px;
+}
+
+.edit-button button {
+	font-weight: 500;
+	font-style: normal;
+	color: #FFFFFF;
+	border :none;
+	width: 41.7%;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.edit-button button:first-child {
+	margin-right: 7.4%;
+}
+
 @media screen and (max-width: 768px) {
 
 	.delete-forever {
@@ -362,6 +418,7 @@ input::placeholder{
 
 
 @media screen and (min-width: 768px) {
+
 	.menu {
 		display: none;
 	}

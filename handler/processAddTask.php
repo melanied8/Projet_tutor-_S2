@@ -1,4 +1,8 @@
 <?php
+    //https://grafikart.fr/forum/32789
+
+    $content = trim(file_get_contents("php://input"));
+    $data = json_decode($content, true);
 	//Initialise the session
 	require('../index.php');
 	//To remove the notices

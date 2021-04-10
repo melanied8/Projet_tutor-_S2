@@ -13,17 +13,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"
   />
 	<title>Details de la liste</title>
-	<script type="module" src="./js/index.js"></script>
 </head>
 
 <body>	
 	<div class="wrapper">
 
-	<?php include('sidebar_menu.php') ?>;
+	<?php include('sidebar_menu.php') ?>
 
 		<div class="listDetails-desktop-grid">
 			<div class="list-details">
-					<!--
 				<header class="header">
 					<img class="menu" src="./assets/menu.svg" />
 					<h2>Projet Tutoré</h2>
@@ -31,17 +29,7 @@
 						<img src="./assets/delete-forever.svg">
 						Supprimer la liste
 					</div>
-				</header>-->
-				<div class="desktop-grid">
-				
-					<div class = "rectangle_settings">
-					<button type="button" class="menu-open-button"></button>
-					<p>Projet tutoré</p>
-					<div class="delete-forever">
-						<img src="./assets/delete-forever.svg">
-						Supprimer la liste
-					</div>
-				</div>
+				</header>
 				<ul class="task-list nav-list">
 					<li class="item-size flex-item add-item">
 							<button type="button" class="js-task-button"><img class="plus" src="./assets/plus.svg" /></button>
@@ -98,6 +86,7 @@
 		</div>
 	</div>
 
+<script type="module" src="./dist/index.js"></script>
 <script type="module" src="./dist/app.js"></script>
 </body>
 </html>
