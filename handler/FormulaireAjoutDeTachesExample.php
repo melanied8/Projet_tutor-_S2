@@ -20,7 +20,7 @@
 
     <?php if (!empty($_SESSION["msg_addTask"]))
             { 
-             echo $_SESSION["msg_addTask"]; 
+             echo $_SESSION["msg_addTask"];  
             } 
         ?>
 	</div>
