@@ -3,8 +3,7 @@
 
     $content = trim(file_get_contents("php://input"));
     $data = json_decode($content, true);
-	//Initialise the session
-	require('../index.php');
+
 	//To remove the notices
 	error_reporting(E_ALL ^ E_NOTICE);
 
