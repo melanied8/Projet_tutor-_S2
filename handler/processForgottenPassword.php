@@ -7,7 +7,7 @@
         {
             if (empty($_POST['email'])) {
                 $_SESSION["msg_reset"]="Veuillez saisir une adresse e-mail.";
-                header("Location: forgottenPassword.php");
+                header("Location: forgottenPassword");
                 exit();
             }
             else
@@ -19,7 +19,7 @@
                 if ($users===NULL)
                 {
                     $_SESSION["msg_reset"]="L'adresse mail n'existe pas.";
-                    header("Location: forgottenPassword.php");
+                    header("Location: forgottenPassword");
                     exit();	
                 }
                 else
@@ -35,7 +35,7 @@
                     $headers = "From:" . $from;
                     mail($to,$subject,$message, $headers);
                     $_SESSION["msg_reset"]="L'email a été envoyé.";
-                    header("Location: forgottenPassword.php");
+                    header("Location: forgottenPassword");
                     exit();	
                 }
             }
