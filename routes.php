@@ -14,11 +14,13 @@ return [
   '/processSettingsChangeMail' => 'processSettingsChangeMail',
   '/processSettingsChangePassword' => 'processSettingsChangePassword',
   '/processUpdatePassword' => 'processUpdatePassword',
-  '/home2' => 'home2',
+  '/home' => 'home',
   '/listDetails' => 'listDetails',
   '/FormulaireAjoutDeListeExample' => 'FormulaireAjoutDeListeExample',
   '/processAddList' => 'processAddList',
   '/processDeleteList' => 'processDeleteList',
+   '/sidebar_menu' => 'sidebar_menu',
+  
 ];
 
 ?> 
