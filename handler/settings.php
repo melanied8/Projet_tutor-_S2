@@ -1,6 +1,4 @@
 <?php
-	//Initialise the session
-	require('../index.php');
 	//To remove the notices
 	error_reporting(E_ALL ^ E_NOTICE);
 	//To update the error indications
@@ -21,7 +19,7 @@
 <body>
 	<div class="wrapper">
 
-	<?php include('sidebar_menu.php') ?>
+	<?php include('sidebar_menu') ?>
 
 <div class="desktop-grid">
 
