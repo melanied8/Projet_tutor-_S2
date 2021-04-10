@@ -1,8 +1,4 @@
 <?php
-
-     //Initialise the session
-	require('../index.php');
-
     $_SESSION = array();
     
     // Destroy the session
