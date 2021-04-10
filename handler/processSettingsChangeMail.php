@@ -1,6 +1,4 @@
 <?php
-	//Initialise the session
-	require('../index.php');
 	//To remove the notices
 	error_reporting(E_ALL ^ E_NOTICE);
 	//To update the error indications
@@ -10,7 +8,7 @@
             if( $_POST["email"] !== $_POST["email_confirmation"])
             {
                 $_SESSION["msg_change_email"] = "Adresse e-mail invalide";
-                header("Location: settings.php");
+                header("Location: settings");
                 exit();    
             }
             else
@@ -21,7 +19,7 @@
                 $_SESSION["msg_change_email"]="L'adresse a été mise à jour.";   
                 $_SESSION["email"] = $_POST["email_confirmation"];
             }    
-            header("Location: settings.php");
+            header("Location: settings");
             exit();	
         } 
 ?>

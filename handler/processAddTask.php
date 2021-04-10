@@ -1,8 +1,6 @@
 <?php
     //https://grafikart.fr/forum/32789
 
-    $content = trim(file_get_contents("php://input"));
-    $data = json_decode($content, true);
 
     //To remove the notices
     error_reporting(E_ALL ^ E_NOTICE);

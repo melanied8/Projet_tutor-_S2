@@ -1,6 +1,4 @@
 <?php
-	//Initialise the session
-	require('../index.php');
 	//To remove the notices
 	error_reporting(E_ALL ^ E_NOTICE);
 	//To update the error indications
@@ -25,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 			//If the login exist, vérif = false
 			$verif = false;
 
-			header("Location: FormulaireAjoutDeListeExample.php");
+			header("Location: FormulaireAjoutDeListeExample");
 			exit();    
 		}
 		else {
@@ -37,9 +35,11 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 			$email_id = $_SESSION["email"];
 			$sql = $db->prepare("SELECT id FROM users WHERE email=? LIMIT 1");
 			$sql->execute([$email_id]);
-			$result = $sql-> fetch();
-			//echo $result[0];
-			$id =  $result[0];
+			$usersId = $sql-> fetchAll(PDO::FETCH_ASSOC);
+			foreach($usersId as $row) {
+			$id = $row["id"];
+			//echo "id cua nguoi dung: " . $ID."<br/>"; =>> vérifié le id de utilisateur
+		}
 
 			//on ajoute le nom de la liste à la base de donnée
 			$request = $db->prepare("INSERT INTO list (name, id)
@@ -51,9 +51,9 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 				$request->bindParam(':id', $id);
 				$request->execute();
 				$_SESSION["msg_addList"] = "Nouvelle liste ajouté avec succés";
-				header("Location: FormulaireAjoutDeListeExample.php");
+				header("Location: home");
 				exit();   
-		}
+		} 
 
 	}
 }

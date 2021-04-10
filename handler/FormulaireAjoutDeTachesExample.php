@@ -1,9 +1,3 @@
-<?php
-	//Initialise the session
-	require('../index.php');
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +20,7 @@
 
     <?php if (!empty($_SESSION["msg_addTask"]))
             { 
-             echo $_SESSION["msg_addTask"]; 
+             echo $_SESSION["msg_addTask"];  
             } 
         ?>
 	</div>

@@ -1,6 +1,4 @@
 <?php
-	//Initialise the session
-	require('../index.php');
     
 if ($_SERVER['REQUEST_METHOD']==="POST")
 	{
@@ -14,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 			if (!$ok)
 			{
 				$_SESSION["msg"] = "Le mot de passe ou l'email est incorrect";
-				header("Location: login.php");	
+				header("Location: login");	
 				exit();
 			} 
 			else 
@@ -22,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 				$_SESSION["users"] = $users;	
 				$_SESSION["email"] = $_POST["email"];
 				$_SESSION["msg"] = "les informations sont valides";
-				header("Location: home.php");
+				header("Location: home");
 				exit();					
 			}	
 		}
