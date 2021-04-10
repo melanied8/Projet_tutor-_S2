@@ -1,6 +1,4 @@
 <?php
-	//Initialise the session
-	require('../index.php');
     
 if ($_SERVER['REQUEST_METHOD']==="POST")
 	{
