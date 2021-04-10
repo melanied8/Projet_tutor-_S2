@@ -1,6 +1,4 @@
 <?php
-    //Initialise the session
-    require('../index.php');
     //To remove the notices
     $_SESSION["msg_reset"]="";
 
