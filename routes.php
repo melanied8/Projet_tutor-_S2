@@ -2,20 +2,23 @@
 <?php
 return [
   '/' => 'login.php',
-  '/login' => 'login.php',
-  '/signUp' => 'signUp.php',
-  '/home' => 'home.php',
-  '/settings' => 'settings.php',
-  '/processSignUp' => 'processSignUp.php',
-  '/processLogin' => 'processLogin.php',
-  '/logout' => 'logout.php',
-  '/forgottenPassword' => 'forgottenPassword.php',
-  '/processForgottenPassword' => 'processForgottenPassword.php',
-  '/processSettingsChangeMail' => 'processSettingsChangeMail.php',
-  '/processSettingsChangePassword' => 'processSettingsChangePassword.php',
-  '/processUpdatePassword' => 'processUpdatePassword.php',
-  
-  
+  '/login' => 'login',
+  '/signUp' => 'signUp',
+  '/home' => 'home',
+  '/settings' => 'settings',
+  '/processSignUp' => 'processSignUp',
+  '/processLogin' => 'processLogin',
+  '/logout' => 'logout',
+  '/forgottenPassword' => 'forgottenPassword',
+  '/processForgottenPassword' => 'processForgottenPassword',
+  '/processSettingsChangeMail' => 'processSettingsChangeMail',
+  '/processSettingsChangePassword' => 'processSettingsChangePassword',
+  '/processUpdatePassword' => 'processUpdatePassword',
+  '/home2' => 'home2',
+  '/listDetails' => 'listDetails',
+  '/FormulaireAjoutDeListeExample' => 'FormulaireAjoutDeListeExample',
+  '/processAddList' => 'processAddList',
+  '/processDeleteList' => 'processDeleteList',
 ];
 
 ?> 
