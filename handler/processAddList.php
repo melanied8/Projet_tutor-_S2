@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 				$_SESSION["msg_addList"] = "Nouvelle liste ajouté avec succés";
 				header("Location: home");
 				exit();   
-		}
+		} 
 
 	}
 }
