@@ -1,6 +1,5 @@
 <?php
-	//Initialise the session
-	require('../index.php');
+	
     //$_SESSION["msg_register"] = "";
 	$verif = false;
 
