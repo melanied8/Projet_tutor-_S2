@@ -1,7 +1,7 @@
 
 <?php
 return [
-  '/' => 'login.php',
+  '/' => 'login',
   '/login' => 'login',
   '/signUp' => 'signUp',
   '/home' => 'home',
