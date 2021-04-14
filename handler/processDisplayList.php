@@ -24,7 +24,8 @@
         ?>
 		<li><a href ="listDetails">
         <?php 
-        echo "<a href ='./listDetails.php?id=" . $row["idList"] ."'>" . $row["name"]."</a>";  
+		$lien = route('/listDetails');
+        echo "<a href =$lien?id=" . $row["idList"] .">" . $row["name"]."</a>";  
         
     }
 }
