@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,7 +13,7 @@
 	foreach($usersId as $row) 
     {
 		$IDuser = $row["id"];
-		//echo "id of the user: " . $ID."<br/>";
+		
 	}
 
 	$list =$db->prepare("SELECT name, idList FROM list WHERE id= $IDuser"); 
@@ -25,9 +24,8 @@
         ?>
 		<li><a href ="listDetails">
         <?php 
-        echo $row["name"]." "; 
-        ?></a> 
-        <?php 
+        echo "<a href ='./listDetails.php?id=" . $row["idList"] ."'>" . $row["name"]."</a>";  
+        
     }
 }
 else{
