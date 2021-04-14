@@ -12,7 +12,11 @@
 	  	/>
 	</head>
 	<body>
-
+	<?php
+	if (!isset($_SESSION["email"])) {
+		header("Location: login");
+		exit(); 
+		} else { ?>
 	<div class="wrapper">
 
 			
@@ -49,5 +53,6 @@
 
 	<script type="module" src="./handler/dist/app.js"></script>
 	<script type="module" src="./handler/dist/index.js"></script>
+		<?php } ?>
 	</body>
 </html>
