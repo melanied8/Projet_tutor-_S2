@@ -1,3 +1,4 @@
+
 <?php
 	//To remove the notices
 	error_reporting(E_ALL ^ E_NOTICE);
@@ -11,26 +12,6 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 {
 	if (isset($_POST['listName']) )
 	{  
-		//on verifie que le nom de la liste existe pas déjà 
-		// pour l'instant on vérifie chez tous les utilisateurs et pas que chez l'utilisateur concerné
-		$stmt = $db->prepare("SELECT * FROM list WHERE name = :name");
-		$stmt->execute( [ ':name' => $_POST['listName'],]);
-		$result  = $stmt-> fetchAll(PDO::FETCH_ASSOC);
-		
-		if ($result!=null)
-		{
-			$_SESSION["msg_addList"] = " la list existe déjà";
-			//If the login exist, vérif = false
-			$verif = false;
-
-			header("Location: home");
-			exit();    
-		}
-		else {
-			$verif = true;
-		}
-		if ($verif===true)
-		{
 			//on réccupère l'id qui correspond à la session ouverte 
 			$email_id = $_SESSION["email"];
 			$sql = $db->prepare("SELECT id FROM users WHERE email=? LIMIT 1");
@@ -38,6 +19,26 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 			$usersId = $sql-> fetchAll(PDO::FETCH_ASSOC);
 			foreach($usersId as $row) {
 			$id = $row["id"];
+
+			//on verifie que le nom de la liste existe pas déjà 
+			$stmt = $db->prepare("SELECT * FROM list WHERE name = :name AND id = :id");
+			$stmt->execute( [ 'name' => $_POST['listName'], 'id'=> $id]);
+			$result  = $stmt-> fetchAll(PDO::FETCH_ASSOC);
+		
+		if ($result!=null)
+		{
+			$_SESSION["msg_addList"] = " la list existe déjà";
+			//If the login exist, vérif = false
+			$verif = false;
+
+			header("Location: login");
+			exit();    
+		}
+		else {
+			$verif = true;
+		}
+		if ($verif===true)
+		{
 		}
 
 			//on ajoute le nom de la liste à la base de donnée
