@@ -1,7 +1,7 @@
 
 <?php
 return [
-  '/' => 'login.php',
+  '/' => 'login',
   '/login' => 'login',
   '/signUp' => 'signUp',
   '/home' => 'home',
@@ -20,6 +20,7 @@ return [
   '/processAddList' => 'processAddList',
   '/processDeleteList' => 'processDeleteList',
    '/sidebar_menu' => 'sidebar_menu',
+   '/processDisplayList' => 'processDisplaysList',
   
 ];
 

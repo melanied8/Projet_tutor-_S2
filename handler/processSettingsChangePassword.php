@@ -16,7 +16,7 @@
                 if (!$ok)
                 {
                     $_SESSION["msg_change_password"] = "Mauvais mot de passe actuel";
-                    header("Location: settings.php");	
+                    header("Location: settings");	
                     exit();
                 } 
                 else 
@@ -24,7 +24,7 @@
                     if( $_POST["new_password"] != $_POST["confirm_password"])
                     {
                         $_SESSION["msg_change_password"] = "Nouveau mot de passe et confirmation qui ne correspondent pas";
-                        header("Location: settings.php");	
+                        header("Location: settings");	
                         exit();
                     }
                     else
@@ -34,7 +34,7 @@
                         $sql-> execute(['email' => $_SESSION["email"]]);
                         $_SESSION["msg_change_password"]="Le mot de passe a été réinitialisé."; 
                     
-                        header("Location: settings.php");
+                        header("Location: settings");
                         exit();		
                     }			
                 }	

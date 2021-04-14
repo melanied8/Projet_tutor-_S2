@@ -19,7 +19,7 @@
 <body>
 	<div class="wrapper">
 
-	<?php include('sidebar_menu') ?>
+	<?php include('sidebar_menu.php') ?>
 
 <div class="desktop-grid">
 
@@ -32,8 +32,7 @@
 <div class = "settings">
 
 <h2>Adresse e-mail</h2>
-<p>Adresse e-mail actuelle : </p>
-<!-- Mettre le $_SESSION['login'] -->
+<p>Adresse e-mail actuelle : </p> <?php echo $_SESSION["email"] ?>
 <form action="<?= route('/processSettingsChangeMail') ?>" method="POST">
 <label>Nouvelle adresse e-mail</label>
 <input class="box-model" type="email" name="email" placeholder="mail@provider.com">
@@ -68,7 +67,7 @@
 
 </div>
 
-<script type="module" src="./dist/app.js"></script>
+<script type="module" src="./handler/dist/app.js"></script>
 </body>
 </html>
 

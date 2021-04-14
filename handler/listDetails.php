@@ -86,8 +86,8 @@
 		</div>
 	</div>
 
-<script type="module" src="./dist/index.js"></script>
-<script type="module" src="./dist/app.js"></script>
+<script type="module" src="./handler/dist/index.js"></script>
+<script type="module" src="./handler/dist/app.js"></script>
 </body>
 </html>
 
