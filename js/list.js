@@ -1,11 +1,14 @@
+import {addTask} from "./request.js"
+
 export const initList = (listElement) => {
 
   const addItem = (label) => {
+    addTask(label, 'http://localhost/workspace/ptut/handler/processAddTask.php')
     const item = makeItem(label)
 
     listElement.prepend(item)
 
-    getTree({ nom: label}, 'http://localhost/workspace/ptut/handler/processAddTask.php')
+    
   }
 
   return {addItem}
@@ -75,36 +78,3 @@ const createItemElement = (itemLabel) => {
 
   return item
 }
-
-const addItemToDb(label, url) {
-
-           const options = {
-               method: 'POST',
-               body: JSON.stringify(label)
-           }
-
-           fetch(url, options)
-               .then(response => {
-                   console.log(response);
-                   console.log('la reponse est : ' + response.ok)
-                   console.log('le status est : ' + response.status)
-                   console.log('le statusText est : ' + response.statusText)
-                   console.log('le Text est : ' + response.responseText)
-                   if (response.ok) {
-                       console.log('Tout ce passe bien')
-                       return response.json()
-                   } else {
-                       console.log('Erreur : ' + response.statusText)
-                   }
-                   return response.json()
-               })
-               .then(json => {
-                   if (json.success === true) {
-                       console.log('les json est : ', json.success);
-                   } else {
-                       console.log('le json est ', json.message);
-                   }
-               })
-               .catch(error => console.log('erreur de fetch', error))
-               .catch(error => console.log('erreur de json', error))
-       }
