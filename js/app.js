@@ -3,6 +3,7 @@ import {initList} from "./list"
 
 console.log('hello world')
 
+
 export const initApp = (itemAddElement, listElement) => {
 
 	const list = initList(listElement)
@@ -11,3 +12,6 @@ export const initApp = (itemAddElement, listElement) => {
 
 	const list2 = initList()
 }
+
+
+

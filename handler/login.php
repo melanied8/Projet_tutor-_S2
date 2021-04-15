@@ -20,6 +20,7 @@
 		<a href="<?= route('/signUp')?>">Pas encore de compte ? Inscrivez-vous !</a>
 	</form>
 	</div>
-<script src="./handler/dist/app.js"></script>
+
 </body>
+<script type="module" src="./handler/dist/sidebarList.js"></script>
 </html>

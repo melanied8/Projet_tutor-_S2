@@ -1,9 +1,3 @@
-<?php
-
-     //Initialise the session
-	require('../index.php');
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,8 +80,11 @@
 		</div>
 	</div>
 
-<script type="module" src="./handler/dist/index.js"></script>
-<script type="module" src="./handler/dist/app.js"></script>
+	<script type="module" src="./handler/dist/app.js"></script>
+	<script type="module" src="./handler/dist/index.js"></script>
+	<script type="module" src="./handler/dist/request.js"></script>
+	<script type="module" src="./handler/dist/list.js"></script>
+	<script type="module" src="./handler/dist/form.js"></script>
 </body>
 </html>
 

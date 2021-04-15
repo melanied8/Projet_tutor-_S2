@@ -17,21 +17,6 @@
 
 			
 			<?php include('sidebar_menu.php') ?>
-
-
-			<!---
-			<div class = desktop-grid>
-				<div class = "rectangle_settings">
-
-					<img src="./assets/menu.svg">
-					<p>Prochaines tâches</p>
-					</div>
-			<ul>
-				<li></li>
-			</ul>
-			</div>
-			-->
-	   
 		
 
 		<div class="desktop-grid">
@@ -45,9 +30,8 @@
 
 	</div>
 
-
-
-	<script type="module" src="./handler/dist/app.js"></script>
-	<script type="module" src="./handler/dist/index.js"></script>
 	</body>
+
+
+	<script type="module" src="./handler/dist/sidebarList.js"></script>
 </html>
