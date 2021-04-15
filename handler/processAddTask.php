@@ -1,4 +1,3 @@
-<!-- MODIFICATION -->
 <?php
     //get the name of the task from addTask asynchronous js function 
     $inputJSON = file_get_contents('php://input');
