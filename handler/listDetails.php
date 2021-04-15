@@ -10,6 +10,11 @@
 </head>
 
 <body>	
+<?php
+	if (!isset($_SESSION["email"])) {
+		header("Location: login");
+		exit(); 
+	} else { ?>
 	<div class="wrapper">
 
 	<?php include('sidebar_menu.php') ?>
@@ -82,6 +87,8 @@
 
 <script type="module" src="./handler/dist/index.js"></script>
 <script type="module" src="./handler/dist/app.js"></script>
+<?php }?>
 </body>
 </html>
+
 

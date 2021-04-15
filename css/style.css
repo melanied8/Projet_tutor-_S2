@@ -662,19 +662,24 @@ input::placeholder{
 
 .menu-open-button
 {
-	background: url("/assets/menu.svg");		
+	background: url("./assets/menu.svg");		
 	width : 28px;
 	height : 28px;
 }
 
 .menu-close-button
 {
-	background: url("/assets/close.svg");	
+	background: url("./assets/close.svg");	
 }
 
 
 @media screen and (min-width: 768px) {
 	.menu-close-button
+	{
+		display : none;
+	}
+
+	.menu-open-button
 	{
 		display : none;
 	}

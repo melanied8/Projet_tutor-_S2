@@ -31,4 +31,5 @@
 	<img src="./assets/logout.svg">
 	<label><a href="<?= route('/logout') ?>">Déconnexion</a></label>
 	</div>
-	</div>
+</div>
+<script type="module" src="./handler/dist/index.js"></script>
