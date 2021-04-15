@@ -1,14 +1,7 @@
 <?php
-	
-    //$_SESSION["msg_register"] = "";
-	$verif = false;
-
-	if ($_SERVER['REQUEST_METHOD']==="POST")
+    $verif = false;
+    if ($_SERVER['REQUEST_METHOD']==="POST")
     {
-       // header("Location: signUp.php");
-        //exit();
-        //$_SESSION["msg_register"] = "";
-
         if (isset($_POST['email']) && isset($_POST['confirm_password']) &&  isset($_POST['password']) )
 		{                 
             $stmt = $db->prepare("SELECT * FROM users WHERE email = :email");
