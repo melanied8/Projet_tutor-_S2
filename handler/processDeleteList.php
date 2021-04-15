@@ -1,4 +1,3 @@
-<!-- MODIFICATION -->
 <?php
     $nameList = $_GET['name'];  
     // sql to delete a record
