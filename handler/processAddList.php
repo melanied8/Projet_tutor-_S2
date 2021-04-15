@@ -1,4 +1,3 @@
-<!-- MODIFICATION -->
 <?php
 
 	$verif = false;
