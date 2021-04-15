@@ -1,4 +1,3 @@
-<!-- MODIFICATION -->
 <!DOCTYPE html>
 <html>
 <head>
