@@ -1,0 +1,807 @@
+html {
+	height: 100%;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+}
+
+textarea{
+	resize: none;
+}
+
+
+body {
+	height: 100%;
+	margin : 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+p, h2, h1 {
+	margin: 0;
+}
+
+
+/*************************** Login & Signup *************************/
+
+.login-wrapper, .signup-wrapper, .fp-wrapper, .up-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.login, .signup, .fp, .update {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 13px 0 12px;
+}
+
+.login label, .signup label, .fp label, .update label {
+	margin-bottom: 8px;
+}
+
+
+.login input, .signup input, .fp input, .update input {
+	margin-bottom: 24px;
+}
+
+
+/*
+input::placeholder{
+	text-indent: 1em;
+	color: #ADADAD;
+}
+*/
+
+.box-model {
+	box-sizing: border-box;
+	border : 1px solid #ADADAD;
+	width: 100%;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.button {
+	color: white;
+	border : none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pink {
+	background-color: #FF7675;
+}
+
+
+.login a {
+	text-decoration: none;
+	color :#FF7675;
+	margin-top: 32px;
+	text-align: center;
+}
+
+
+
+@media screen and (min-width: 375px) {
+	.login-wrapper, .signup-wrapper, .fp-wrapper, .up-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+
+	.login, .signup, .fp, .update {
+		width: 375px;
+	}
+}
+
+/*********************** Home ***********************/
+/*
+.home {
+	display: flex;
+	align-items: center;
+	margin-bottom: 37px;
+}
+
+.home img {
+	margin-right: 13px;
+}
+
+.home span {
+	font-weight: bold;
+}
+*/
+
+/*
+.increment-box { 
+
+	
+	width: 24px;
+	height: 24px;
+	border-radius: 3px;
+	background-color: #FF7675;
+	
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	margin-right : 16px;
+}
+*/
+/*
+.nav-list {
+	padding: 0;
+	margin: 0;
+}
+
+.my-lists li + li {
+	margin-top: 16px;
+}
+
+.my-lists input {
+	border:none;
+	background : #F5F5F5;
+}
+
+.my-lists input:focus {
+	outline: none;
+}
+
+.my-lists input::placeholder {
+	font-weight: 500;
+	color: black;
+}
+
+.my-lists button:focus {
+	outline: none;
+}
+
+.list-button {
+	border : 0;
+	padding: 0;
+}
+
+.nav-list-item {
+	display: flex;
+	justify-content: space-between; 
+}
+
+.list-div {
+	display: flex;
+}
+
+
+.list{
+	margin-top: 39px;
+	margin-bottom: 24px;
+	font-size: 16px;
+}
+
+.settings_and_deco a {
+	font-weight: 500;
+	color: black;
+}
+
+*/
+
+/***************************** listDetails *********************************/
+
+
+.header {
+	font-size: 18px;
+	line-height: 21.09px;
+	font-weight: 500;
+	height: 54px;
+	background-color: #FF7675;
+	color: white;
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.header h2
+	{
+		font-family: Roboto;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 21px;
+		letter-spacing: 0em;
+		text-align: left;
+		padding-left: 20px;	
+	}
+}
+
+
+.menu {
+	width: 16px;
+	height: 14px;
+	margin: 0 20px 0 20px;
+}
+
+.list-details li:first-child {
+	border-top : 1px solid #BDBDBD;
+}
+
+.list-details li {
+	border-bottom: 1px solid #BDBDBD;
+}
+
+.flex-item {
+	display: flex;
+	align-items: center;
+}
+
+.item-size {
+	height: 48px;	
+}
+
+.radio-size {
+	width: 20px;
+	height: 20px;
+}
+
+.radio {
+	margin : 0 16px 0  15px;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.delete {
+	margin-right: 24px;
+}
+
+.js-task-button {
+	background: transparent;
+	border : none;
+}
+
+.plus {
+	padding: 0;
+	background : transparent;
+	border: none;
+	margin : 0 16px 0 13px;
+}
+
+.list-details input {
+	border : none;
+	text-indent: 0em;
+}
+
+.add-item {
+	background-image: './assets/delete.svg';
+}
+
+.list-details input::placeholder {
+	text-indent: 0em;
+}
+
+.edit {
+	width: 300px;
+	height: 100%;
+	display: none;
+	top: 0;
+	right: 0;
+}
+
+.edit-box {
+	width: 91%;
+	height: 48px;
+}
+
+.style-box {
+	background: #FFFFFF;
+	box-sizing: border-box;
+	border : 1px solid #ADADAD;
+	border-radius: 4px;
+}
+
+.edit-form {
+	display: grid;
+	grid-row-gap: 24px;
+}
+
+.open-link {
+	display: block;
+}
+
+.form-item, .form-item .nav-list {
+	display: grid;
+	grid-row-gap: 8px;
+}
+
+.form-item textarea {
+	box-sizing: border-box;
+	width: 91%;
+	height: 128px;
+	border: 1px solid #ADADAD;
+	border-radius: 4px;
+}
+
+.edit-button button {
+	font-weight: 500;
+	font-style: normal;
+	color: #FFFFFF;
+	border :none;
+	width: 41.7%;
+	height: 48px;
+	border-radius: 4px;
+}
+
+.edit-button button:first-child {
+	margin-right: 7.4%;
+}
+
+@media screen and (max-width: 768px) {
+
+	.delete-forever {
+		display: none;
+	}
+
+	.shadow {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.4);
+		width: 6.7%;
+		height: 100%;
+	}
+
+	.edit {
+		position: fixed;
+		top: 0;
+		right: 0;
+		background-color: #FFFFFF;
+		width: 93%;
+		height: 100%;
+	}
+
+	.close {
+		position: absolute;
+		top: 21px;
+		right: 21px;
+	}
+
+	.edit-form {
+		padding: 56px 16px 0 16px;
+	}
+
+	.style-box {
+		background: #FFFFFF;
+		box-sizing: border-box;
+		border : 1px solid #ADADAD;
+		border-radius: 4px;
+	}
+
+	.remove-desktop {
+		display: none;
+	}
+
+	.edit-box {
+		width: 91%;
+		height: 48px;
+	}
+
+	.step, .new-step {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.edit-form {
+		display: grid;
+		grid-row-gap: 24px;
+	}
+
+	.form-item, .form-item .nav-list {
+		display: grid;
+		grid-row-gap: 8px;
+	}
+
+	.form-item textarea {
+		box-sizing: border-box;
+		width: 91%;
+		height: 128px;
+		border: 1px solid #ADADAD;
+		border-radius: 4px;
+	}
+
+
+	.edit-button {
+		display: flex;
+	}
+
+	.edit-button button {
+		font-weight: 500;
+		font-style: normal;
+		color: #FFFFFF;
+		border :none;
+		width: 41.7%;
+		height: 48px;
+		border-radius: 4px;
+	}
+
+	.edit-button button:first-child {
+		margin-right: 7.4%;
+	}
+
+
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+	.menu {
+		display: none;
+	}
+
+	.header {
+		color: black;
+		position: relative;
+		background-color: white;
+		margin-bottom: 75px;
+	}
+
+
+	.delete-forever {
+		background-color: #D63031;
+		color: white;
+		font-weight: 500;
+		border-radius: 3px;
+		position: absolute;
+		right: 28px;
+		top: 27px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-right: 16px;
+	}
+
+	.delete-forever img {
+		margin:  15px 21px;
+	}
+
+	.list-details .nav-list {
+		padding: 0 16px 0 19px;
+	}
+
+	.listDetails-desktop-grid{
+		grid-column: 2;
+	}
+
+	.listDetails-desktop-grid h2 {
+		padding-top: 32px;
+		padding-left : 19px;
+	}
+
+	.edit {
+		background-color: #F5F5F5;
+		grid-column: 3;
+		width: 300px;
+		padding: 32px 16px 0 16px;
+	}
+
+	.close {
+		display: none;
+	}
+
+	.edit input[type="radio"] {
+		margin-left: 8px;
+		margin-right: 12px;
+	}
+
+	.dead-line {
+		padding-left: 12.25px;
+		padding-right: 11.33px;
+	}
+
+	
+
+	.grey {
+		background: #BDBDBD;
+	}
+
+	.list-details a {
+		color: #9E9E9E;
+	}
+
+
+
+
+
+}
+
+
+/***************************** Settings *********************************/
+
+.wrapper .button{
+	background-color:  #FF7675;  
+}
+
+@media screen and (max-width: 767px) 
+{
+	.rectangle_settings
+	{	
+	background-color: #FF7675; 
+	display : grid;
+	grid-template-columns: repeat(2,auto);
+	grid-gap: 20px;
+	justify-content: left;
+    align-items: center;
+    width: 100%;
+	}
+
+	.rectangle_settings p
+	{
+	color : #FFFFFF;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: 0em;
+	text-align: left;
+	padding-top : 17px;
+	padding-bottom : 16px;
+
+	}	
+
+	.settings
+	{
+	padding-bottom: 31px;
+	padding-right : 12px;
+	padding-left : 13px;
+	}
+
+	.sidebar
+	{
+		display: none;
+	}
+}
+
+
+.settings .settings-password
+{
+	margin-top : 48px;
+}
+
+.button_plus
+{
+	border : none;
+	background-color: #F5F5F5;
+}
+
+.display_list 
+{
+	display : grid;	
+	grid-gap : 16px;
+}
+
+.display_list a
+{
+	font-family: Roboto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #000000;
+	
+}
+
+.settings input
+{	
+	text-indent: 1em;
+	margin-bottom: 24px;
+	padding: 0;
+
+} 
+
+.settings label
+{
+	text-decoration: none;
+	display: block;
+	margin-top: 32px;	
+}
+
+.settings_and_deco
+{
+	display : grid;
+	grid-template-columns: repeat(2,auto);
+	grid-gap: 13.67px;
+	justify-content: left;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	padding-bottom : 19px;
+}
+
+.lists_and_line
+{
+	display : grid;
+	grid-template-columns: repeat(2,auto);
+	grid-gap: 18px;
+	justify-content: left;
+	align-items: center;
+	/*margin-bottom: 24px;*/
+
+}
+
+.new_list
+{
+	border : none;
+	background: #F5F5F5;
+}
+
+@media screen and (min-width: 768px) {
+	.wrapper
+	{
+	display : grid;	
+	grid-template-columns : auto 1fr;
+	height : 100%;
+	}
+
+
+	.rectangle_settings p
+	{
+	color : black;
+	font-size: 32px;
+	margin-block-start: 0px;
+	font-weight: 700;
+	}
+
+	.sidebar
+	{
+		padding-top: 32px;
+		width : 300px;
+		grid-column: 1;
+		background-color: #F5F5F5;
+		position : relative;
+		padding-left : 16px;	
+		padding-right : 16px;	
+
+	}
+
+	.sidebar h1
+	{
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.sidebar li{
+		display : flex;
+		align-items: center;
+		grid-column-gap: 18px;
+	}
+
+	.sidebar ul{
+		margin-left : 0px;
+		padding-left : 0px;
+		display : grid;
+	}
+
+	.desktop-grid
+	{
+		grid-column: 2;
+		padding-left: 32px;
+		width : 350px;
+		padding-bottom : 31px;
+
+	}
+
+	.desktop-grid h2
+	{
+		padding-top : 28px;
+	}
+}
+
+/*JAVASCRIPT*/
+#write-new-list
+{
+	display : none;
+}
+
+.menu-open-button
+{
+	/*background: url("./assets/menu.svg");	*/	
+	width : 28px;
+	height : 28px;
+	border : none;
+	background: #FF7675;
+
+}
+
+.menu-close-button
+{
+	border : none;
+	width : 28px;
+	height : 28px;
+}
+
+
+@media screen and (min-width: 768px) {
+	.menu-close-button
+	{
+		display : none;
+	}
+
+	.menu-open-button
+	{
+		display : none;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+
+	
+	.menu-close-button
+	{
+		width : 28px;
+		height : 28px;
+		margin-top : 21px;
+	}
+	.sidebar
+	{
+		position: absolute;
+		width: 90%;
+		height: 100%;
+		left: 0px;
+		top: 0px;
+		display : none;	
+		background-color: #F5F5F5;
+		padding-left : 19px;
+	}
+
+	.sidebar h1
+	{
+		font-size : 16px;
+	}
+
+	
+	.menu-open
+	{
+		display :block;
+		/*grid-template-columns: auto auto;*/
+		width: 90%;
+		height: 100%;
+
+	}
+	
+
+	.background_dark
+	{
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	.sidebar ul
+	{
+		margin-block-start : 0px;
+		padding-left : 0px;
+	}
+
+}
+
+.button-home
+{
+   padding-top: 12px;
+   padding-bottom : 17px;
+}
