@@ -1,7 +1,6 @@
 <?php
     
     //Initialise the session
-    //require('../index.php');
     //To remove the notices
     error_reporting(E_ALL ^ E_NOTICE);
 

@@ -1,6 +1,7 @@
 <div class="sidebar">
-	<div class="close-button-and-home">
-	<button class="menu-close-button"></button>
+	
+	<button class="menu-close-button"><img src="./assets/close.svg"></button>
+	<div class="button-home">
 	<img src="./assets/home.svg">
 	<b><?php echo $_SESSION["email"] ?></b> 
 	</div>
@@ -13,15 +14,14 @@
 	</div>
 	
 	<ul>
-	<!-- Affichage des listes -->	   
+	<!-- Lists view -->	   
 		<?php include("processDisplayList.php") ?>
 
 		<form action="<?= route('/processAddList') ?>" method="POST">	
-		<div class="new-list"><li><img src="./assets/plus.svg">Nouvelle liste</li></div>
-		<div id="write-new-list">
-		<input class="box-model" type="text" name="listName" placeholder="Nom de la liste">
-		<button class="button box-model" type="submit">Valider la liste</button>
-		</div>
+
+	    <button class="button_plus" type="submit"><img src="./assets/plus.svg"></button>
+		<input type="text" class="new_list" name="listName" placeholder="Nouvelle liste">
+		
 	</ul>
 	</form>
 	

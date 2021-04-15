@@ -24,15 +24,16 @@
 <div class="desktop-grid">
 
 	<div class = "rectangle_settings">
-	<button type="button" class="menu-open-button"></button>
+	<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
 	<p>Paramètres</p>
 	</div>
 
 
 <div class = "settings">
 
+<!-- Change your mail form -->
 <h2>Adresse e-mail</h2>
-<p>Adresse e-mail actuelle : </p> <?php echo $_SESSION["email"] ?>
+<p>Adresse e-mail actuelle : <b><?php echo $_SESSION["email"] ?></b>  </p> 
 <form action="<?= route('/processSettingsChangeMail') ?>" method="POST">
 <label>Nouvelle adresse e-mail</label>
 <input class="box-model" type="email" name="email" placeholder="mail@provider.com">
@@ -46,6 +47,7 @@
             } 
         ?>
 
+<!-- Change password form-->
 <h2 class = "settings-password">Mot de passe</h2>
 <form action="<?= route('/processSettingsChangePassword') ?>" method="POST">
 <label>Mot de passe actuel</label>
@@ -67,7 +69,9 @@
 
 </div>
 
-	<script type="module" src="./handler/dist/sidebarList.js"></script>
+<script type="module" src="./handler/dist/sidebarList.js"></script>
+
 </body>
+
 </html>
 

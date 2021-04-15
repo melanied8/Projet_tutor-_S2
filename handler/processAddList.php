@@ -27,11 +27,11 @@ if ($_SERVER['REQUEST_METHOD']==="POST")
 		
 		if ($result!=null)
 		{
-			$_SESSION["msg_addList"] = " la list existe déjà";
+			$_SESSION["msg_addList"] = " la liste existe déjà";
 			//If the login exist, vérif = false
 			$verif = false;
 
-			header("Location: login");
+			header("Location: home");
 			exit();    
 		}
 		else {

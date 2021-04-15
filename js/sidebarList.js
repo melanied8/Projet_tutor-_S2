@@ -1,14 +1,9 @@
-
-/*Barre de menu à gauche*/
-
+/*Sidebar on left*/
 
 const openMenuButton = document.querySelector(".menu-open-button")
 const closeMenuButton = document.querySelector(".menu-close-button")
 const menu = document.querySelector(".sidebar")
 const wrapper = document.querySelector(".wrapper")
-const newList = document.querySelector(".new-list")
-let writeList = document.getElementById("write-new-list")
-
 
 
 const openMenu = () => {
@@ -21,28 +16,16 @@ if(openMenuButton)
 openMenuButton.addEventListener("click", openMenu)
 }
 
-
+/*add background effect + sidebar open for mobile version*/
 const closeMenu = () => {
 menu.classList.remove("menu-open")
 wrapper.classList.remove("background_dark")
 
 }
 
+/*close the sidebar when you click on the button*/
 if(closeMenuButton)
 {
   closeMenuButton.addEventListener("click", closeMenu)
 }
 
-
-const writeNewList = () => {
-  if(getComputedStyle(writeList).display != "none")
-  {
-    writeList.style.display = "none";
-  }
-  else 
-  {
-    writeList.style.display = "block";
-  }
-}
-
-newList.addEventListener("click",writeNewList)

@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="./handler/css/style.css" />
-	</head>
-</html>
-
 <?php
 	$stmt =$db->prepare("SELECT id FROM users WHERE email= :email"); 
 	$stmt-> execute(['email' => $_SESSION["email"]]);
@@ -22,10 +15,16 @@
 	foreach($lesLists as $row) 
 	{ 
         ?>
-		<li><a href ="listDetails">
+		<li><a href ="listDetails"></li>
         <?php 
 		$lien = route('/listDetails');
-        echo "<a href =$lien?id=" . $row["idList"] .">" . $row["name"]."</a>";  
+		?>
+		<div class = "display_list">
+       <?php echo "<a href =$lien?id=" . $row["idList"] .">" . $row["name"]."</a>";  
+		?>
+		</div>
+		<?php 
+		
     }
 	}
 	else{
