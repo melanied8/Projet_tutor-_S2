@@ -1,3 +1,4 @@
+
 <?php
 return [
   '/' => 'login',
@@ -13,15 +14,13 @@ return [
   '/processSettingsChangeMail' => 'processSettingsChangeMail',
   '/processSettingsChangePassword' => 'processSettingsChangePassword',
   '/processUpdatePassword' => 'processUpdatePassword',
+  '/updatePassword' => 'updatePassword',
   '/home' => 'home',
   '/listDetails' => 'listDetails',
-  '/FormulaireAjoutDeListeExample' => 'FormulaireAjoutDeListeExample',
   '/processAddList' => 'processAddList',
-  '/afficherItemList' => 'afficherItemList', 
-  '/afficherItemList2' => 'afficherItemList2',
-  '/deleteitemList' => 'deleteitemList',
-  '/processDisplayList2' => 'processDisplayList2',
- 
+  '/processDeleteList' => 'processDeleteList',
+   '/sidebar_menu' => 'sidebar_menu',
+   '/processDisplayList' => 'processDisplaysList',
 ];
 
 ?> 
