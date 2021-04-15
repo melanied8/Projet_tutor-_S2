@@ -1,4 +1,3 @@
-
 <?php
 return [
   '/' => 'login',
@@ -18,11 +17,11 @@ return [
   '/listDetails' => 'listDetails',
   '/FormulaireAjoutDeListeExample' => 'FormulaireAjoutDeListeExample',
   '/processAddList' => 'processAddList',
-  '/processDeleteList' => 'processDeleteList',
-   '/sidebar_menu' => 'sidebar_menu',
-   '/processDisplayList' => 'processDisplaysList',
-   '/afficherItemList2' => 'afficherItemList2'
-  
+  '/afficherItemList' => 'afficherItemList', 
+  '/afficherItemList2' => 'afficherItemList2',
+  '/deleteitemList' => 'deleteitemList',
+  '/processDisplayList2' => 'processDisplayList2',
+ 
 ];
 
 ?> 

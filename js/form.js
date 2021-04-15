@@ -1,3 +1,8 @@
+/**
+ *
+ * @param {itemAddElement} listDetails list
+ * @param {onSubmit} makeItem
+ */
 export const initForm = (itemAddElement, onSubmit) => {
 
 		

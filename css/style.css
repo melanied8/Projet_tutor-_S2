@@ -246,6 +246,11 @@ input::placeholder{
 	margin-right: 24px;
 }
 
+.js-task-button {
+	background: transparent;
+	border : none;
+}
+
 .plus {
 	padding: 0;
 	background : transparent;
@@ -256,6 +261,10 @@ input::placeholder{
 .list-details input {
 	border : none;
 	text-indent: 0em;
+}
+
+.add-item {
+	background-image: './assets/delete.svg';
 }
 
 .list-details input::placeholder {

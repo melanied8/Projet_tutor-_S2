@@ -3,7 +3,7 @@
 
 $host =  "localhost";
 $dbname = "ptut";
-$port = "3306";
+$port = "3307";
 $servername = "localhost";
 $username = "root";
 $password = "";

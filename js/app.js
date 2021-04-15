@@ -1,9 +1,11 @@
 import {initForm} from "./form"
 import {initList} from "./list"
 
-console.log('hello world')
-
-
+/**
+ *
+ * @param {itemAddElement} listDetails form
+ * @param {listElement} listDetails list
+ */
 export const initApp = (itemAddElement, listElement) => {
 
 	const list = initList(listElement)

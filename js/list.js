@@ -1,8 +1,15 @@
 import {addTask} from "./request.js"
 
+/**
+ * Creation of a task
+ *
+ * @param {listElement} listDetails list
+ * @return {item} the task item 
+ */
 export const initList = (listElement) => {
 
   const addItem = (label) => {
+    //asynchronous request 
     addTask(label, 'http://localhost/workspace/ptut/handler/processAddTask.php')
     const item = makeItem(label)
 

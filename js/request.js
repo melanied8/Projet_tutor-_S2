@@ -1,3 +1,9 @@
+/**
+ * send a request to the server to add a new task
+ *
+ * @param {label} task description
+ * @param {url} php page url
+ */
 export const addTask = async (label, url) => {
   const options = {
     method: 'POST',
