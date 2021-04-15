@@ -1,4 +1,3 @@
-<!-- MODIFICATION -->
 <?php
     //we select the id of the current user
     $stmt =$db->prepare("SELECT id FROM users WHERE email= :email"); 
