@@ -1,4 +1,3 @@
-<!-- MODIFICATION -->
 <div class="sidebar">
 	<div class="close-button-and-home">
 	<button class="menu-close-button"></button>
