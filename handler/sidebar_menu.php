@@ -7,7 +7,7 @@
 
 	<div class = "lists_and_line">
 	<h1>Mes listes</h1>
-	<svg class="line" width="176" height="1" viewBox="0 0 176 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg class="line" width="176" height="1" viewBox="0 0 176 1" fill="none">
 		<line x1="4.37114e-08" y1="0.5" x2="176" y2="0.500015" stroke="#ADADAD"/>
 		</svg>
 	</div>
@@ -32,4 +32,4 @@
 	<label><a href="<?= route('/logout') ?>">Déconnexion</a></label>
 	</div>
 </div>
-<script type="module" src="./handler/dist/index.js"></script>
+
