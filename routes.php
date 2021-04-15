@@ -21,6 +21,7 @@ return [
   '/processDeleteList' => 'processDeleteList',
    '/sidebar_menu' => 'sidebar_menu',
    '/processDisplayList' => 'processDisplaysList',
+   '/afficherItemList2' => 'afficherItemList2'
   
 ];
 

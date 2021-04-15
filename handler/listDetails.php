@@ -1,9 +1,3 @@
-<?php
-
-     //Initialise the session
-	require('../index.php');
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +24,7 @@
 						Supprimer la liste
 					</div>
 				</header>
-				<ul class="task-list nav-list">
+				<ul id="" class="task-list nav-list">
 					<li class="item-size flex-item add-item">
 							<button type="button" class="js-task-button"><img class="plus" src="./assets/plus.svg" /></button>
 							<input class="js-task-input" type="text" name="" placeholder="Ajouter une tâche...">
