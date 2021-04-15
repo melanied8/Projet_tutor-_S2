@@ -26,10 +26,9 @@
         <?php 
 		$lien = route('/listDetails');
         echo "<a href =$lien?id=" . $row["idList"] .">" . $row["name"]."</a>";  
-        
     }
-}
-else{
+	}
+	else{
     echo "0 results";
-}
+	}
 ?>
