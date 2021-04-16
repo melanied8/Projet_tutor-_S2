@@ -1,18 +1,16 @@
 <?php
-	//To remove the notices
-	error_reporting(E_ALL ^ E_NOTICE);
-	//To update the error indications
-
     if ($_SERVER['REQUEST_METHOD']==="POST")
         {
+            //we verify that the new email match the confirmation email
             if( $_POST["email"] !== $_POST["email_confirmation"])
             {
-                $_SESSION["msg_change_email"] = "Adresse e-mail invalide";
+                $_SESSION["msg_change_email"] = "Les adresse mails ne correspondent pas";
                 header("Location: settings");
                 exit();    
             }
             else
             {
+                //we update the email in the database
                 $email = $_POST["email_confirmation"];
                 $sql = $db->prepare("UPDATE users SET email='$email' WHERE email= :email");
                 $sql-> execute(['email' =>$_SESSION["email"]]);

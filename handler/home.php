@@ -1,9 +1,3 @@
-<?php
-	//To remove the notices
-	error_reporting(E_ALL ^ E_NOTICE);
-	//To update the error indications
-    //$_SESSION["msg_change_email"]="";
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,24 +11,29 @@
   />
 </head>
 <body>
-<div class="wrapper">
+	<?php
+		//we test if a session is open 
+		//if not we redirect to the login page
+		if (!isset($_SESSION["email"])) {
+			$_SESSION["msg_connection"] = "Veuillez vous connecter.";
+			header("Location: login");
+			exit(); 
+		} 
+		//we show the home page 
+		else { ?>
+		<div class="wrapper">
 
-	<?php include('sidebar_menu.php') ?>
+		<?php include('sidebar_menu.php') ?>
 
-  <div class="desktop-grid">
+		<div class="desktop-grid">
 
-	<div class = "rectangle_settings">
-	<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
-	<p>Prochaines tâches</p>
-	</div>
-
-
-  </div>
-
-</div>
-
-<script type="module" src="./handler/dist/sidebarList.js"></script>
-
-	</body>
-
+		<div class = "rectangle_settings">
+			<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
+		<p>Prochaines tâches</p>
+		</div>
+		</div>
+		</div>
+		<script type="module" src="./handler/dist/sidebarList.js"></script>
+	<?php } ?>
+</body>
 </html>

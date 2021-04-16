@@ -1,9 +1,4 @@
-﻿<?php
-	
-	//To remove the notices
-	error_reporting(E_ALL ^ E_NOTICE);
-	?>
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
@@ -14,6 +9,15 @@
 	<title>Inscription</title>
 </head>
 <body>
+	<?php
+		//we test if a session is open 
+		//if yes, we redirect to the home page
+		if (isset($_SESSION["email"])) {
+			header("Location: home");
+			exit(); 
+		} 
+		//else we show the signUp page 
+		else { ?>
 	<div class="signup-wrapper">
 	<form action="<?= route('/processSignUp') ?>" method="POST" class="signup">
 		<label>Adresse e-mail</label> 
@@ -23,7 +27,15 @@
 		<label>Répéter le mot de passe</label>
 		<input class="box-model" type="password" name="confirm_password" placeholder="password">
 		<button class="button box-model pink" type="submit">Inscription</button>
+		<?php
+			//Information on the current process
+			if (!empty($_SESSION["msg_register"])) 
+			{
+				echo ($_SESSION["msg_register"]); 
+			}
+		?>
 	</form>
 	</div>
+	<?php } ?>
 </body>
 </html>

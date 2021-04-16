@@ -10,6 +10,16 @@
 </head>
 
 <body>	
+	<?php
+		//we test if a session is open 
+		//if not we redirect to the login page
+		if (!isset($_SESSION["email"])) {
+			$_SESSION["msg_connection"] = "Veuillez vous connecter.";
+			header("Location: login");
+			exit(); 
+		} 
+		//we show the listDetails page 
+		else { ?>
 	<div class="wrapper">
 
 	<?php include('sidebar_menu.php') ?>
@@ -89,6 +99,7 @@
 	<script type="module" src="./handler/dist/index.js"></script>
 	<script type="module" src="./handler/dist/form.js"></script>
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
+	<?php } ?>
 	
 </body>
 </html>
