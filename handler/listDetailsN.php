@@ -16,10 +16,12 @@
 			<header class="header">
 				<img class="menu" src="./assets/menu.svg" />				
 				<h2>Projet Tutoré</h2>
+				<!--
 				<div class="delete-forever">
 					<img src="./assets/delete-forever.svg">
 					Supprimer la liste
 				</div>
+			-->
 			</header>
 			<ul class="task-list nav-list">
 				<li class="item-size flex-item add-item">

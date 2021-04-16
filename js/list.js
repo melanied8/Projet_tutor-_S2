@@ -31,19 +31,21 @@ const makeItem = (label) => {
 
   const init = () => {
     button.addEventListener("click", destroy)
-    link.addEventListener("click", open)
+    /*link.addEventListener("click", open)*/
   }
 
   const destroy = () => {
     element.remove()
-
+    link.removeEventListener("click", open)
     button.removeEventListener("click", destroy)
   }
 
+/*
 const open = () => {
   const sideBar = document.querySelector(".edit")
   sideBar.classList.add("open-link")
 }
+*/
 
   init()
 

@@ -20,10 +20,12 @@
 				<header class="header">
 				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
 					<h2>Projet Tutoré</h2>
+					<!--
 					<div class="delete-forever">
 						<img src="./assets/delete-forever.svg">
 						Supprimer la liste
 					</div>
+				-->
 				</header>
 
 			
