@@ -1,9 +1,3 @@
-<?php
-	//To remove the notices
-	error_reporting(E_ALL ^ E_NOTICE);
-	//To update the error indications
-	$_SESSION["msg"]="";
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,19 +9,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
+	<?php
+		//we test if a session is open 
+		//if not we redirect to the login page
+		if (!isset($_SESSION["email"])) {
+			$_SESSION["msg_connection"] = "Veuillez vous connectez.";
+			header("Location: login");
+			exit(); 
+		} 
+		//we show the forgottenPassword page 
+		else { ?>
 		<div class="fp-wrapper">
 		<form class="fp" action="<?= route('/processForgottenPassword') ?>" method="POST" class="login">
 			<label class="label">Adresse e-mail</label> 
 			<input class="box-model" type="email" name="email" placeholder="mail@provider.com">
 			<button class="pink button box-model" type="submit">Envoyer</button>
+			<?php
+			if (!empty($_SESSION["msg_reset"])) 
+			{
+				echo ($_SESSION["msg_reset"]); 
+			}
+			?>
 		</form>
 		</div>
+	<?php } ?>
 	</body>
 </html>
-
-<?php
-if (!empty($_SESSION["msg_reset"])) 
-		{
-        	echo ($_SESSION["msg_reset"]); 
-    	}
-?>
