@@ -13,7 +13,6 @@
 		//we test if a session is open 
 		//if yes, we redirect to the home page
 		if (isset($_SESSION["email"])) {
-			$_SESSION["msg_connection"] = "Veuillez vous connectez.";
 			header("Location: home");
 			exit(); 
 		} 
