@@ -1,61 +1,31 @@
 <?php
-	
-	$verif = false;
-
-	if ($_SERVER['REQUEST_METHOD']==="POST")
+    if ($_SERVER['REQUEST_METHOD']==="POST")
         {
-        // header("Location: signUp.php");
-        //exit();
-        //$_SESSION["msg_register"] = "";
-
-        if (isset($_POST['email']) && isset($_POST['confirm_password']) &&  isset($_POST['password']) )
-		{                 
-            $stmt = $db->prepare("SELECT * FROM users WHERE email = :email");
-            $stmt->execute( [ ':email' => $_POST['email'],]);
-            $result  = $stmt-> fetchAll(PDO::FETCH_ASSOC);
-            
-            if ($result!=null)
+            //we verify that the fields are filled in 
+            if (!isset($_POST["new_password"]) || !isset($_POST["new_password"]))
             {
-                $_SESSION["msg_register"] = "L'email existe déjà";
-                //If the login exist, vérif = false
-                $verif = false;
-
-                header("Location: signUp");
-                exit();    
+                header("Location: updatePassword");
+                exit(); 
             }
-            else
+            else 
             {
-                //If the login does not exist, the registration is authorised
-                $verif = true;
-
-            }
-            if ($verif===true)
-            {
-                //we verify that the passwords are the same
-                if( $_POST["confirm_password"] != $_POST["password"])
+                //we verify that the passwords match
+                if( $_POST["new_password"] != $_POST["confirm_password"])
                 {
-                    $_SESSION["msg_register"] = "Le mot de passe ou l'email ne correspond pas";
-                    header("Location: signUp");
+                    $_SESSION["msg_new_password"] = "Les mots de passe ne correspondent pas.";
+                    header("Location: updatePassword");
                     exit();    
-                } else
+                }
+                else
                 {
-                    //the password is made secure     
-                    $psswrd_hash = password_hash($_POST["confirm_password"],PASSWORD_BCRYPT);
-                    $request = $db->prepare("INSERT INTO users (email, password)
-                    VALUES(:email, :confirm_password)");
-
-                    //the parameters are bind to a specific variable name
-                    $request->bindParam(':email', $email);
-                    $request->bindParam(':confirm_password', $psswrd_hash);
-
-                    $email = $_POST["email"];
-                    
-                    $request->execute();
-                    $_SESSION["msg_register"] = "Nouvel enregistrement créé avec succès";
+                    //we update the password 
+                    $password2_hash = password_hash($_POST["confirm_password"],PASSWORD_BCRYPT);
+                    $sql = $db->prepare("UPDATE users SET password='$password2_hash' WHERE email= :email");
+                    $sql-> execute(['email' => $_SESSION["email"]]);
+                
                     header("Location: login");
-                    exit();     
-                }       
+                    exit();	
+                }
             }
         }
-	}
 ?>
