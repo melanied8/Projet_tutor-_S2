@@ -14,6 +14,7 @@
 			$usersId = $sql-> fetchAll(PDO::FETCH_ASSOC);
 			foreach($usersId as $row) {
 			$id = $row["id"];
+			}
 
 			//we check that the name of the list does not already exist 
 			$stmt = $db->prepare("SELECT * FROM list WHERE name = :name AND id = :id");
@@ -40,6 +41,8 @@
 					$request->bindParam(':name', $name);
 					$request->bindParam(':id', $id);
 					$request->execute();
+					header("Location: home");
+                   			exit();
 			} 
 
 		}
