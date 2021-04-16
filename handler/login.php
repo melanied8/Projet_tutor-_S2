@@ -39,6 +39,10 @@
 					{
 						echo ($_SESSION["msg_register"]); 
 					}
+		      			if (!empty($_SESSION["msg_connection"])) 
+					{
+						echo ($_SESSION["msg_connection"]); 
+					}
 					?>
 				<a href="<?= route('/forgottenPassword') ?>">J'ai oublié mon mot de passe</a>
 				<a href="<?= route('/signUp')?>">Pas encore de compte ? Inscrivez-vous !</a>
