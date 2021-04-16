@@ -16,6 +16,13 @@
 	<ul>
 	<!-- Lists view -->	   
 		<?php include("processDisplayList.php") ?>
+		<?php
+			//Information on the current process
+			if (!empty($_SESSION["msg_addList"])) 
+				{
+					echo ($_SESSION["msg_addList"]); 
+				}
+		?>
 
 		<form action="<?= route('/processAddList') ?>" method="POST">	
 
