@@ -40,8 +40,11 @@
 					$request->bindParam(':name', $name);
 					$request->bindParam(':id', $id);
 					$request->execute();
+					header("Location: home");
+                    exit();
 			} 
 
 		}
 	}
-?>
+
+}
