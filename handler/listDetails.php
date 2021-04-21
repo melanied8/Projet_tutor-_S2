@@ -19,7 +19,9 @@
 			exit(); 
 		} 
 		//we show the listDetails page 
-		else { ?>
+		else { 
+			$_SESSION["idList"] = $_GET['id']; 
+			?>
 	<div class="wrapper">
 
 	<?php include('sidebar_menu.php') ?>
@@ -30,12 +32,10 @@
 				<header class="header">
 				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
 					<h2>Projet Tutoré</h2>
-					<!--
-					<div class="delete-forever">
-						<img src="./assets/delete-forever.svg">
+					<a href="<?= route('/processDeleteList') ?>"><div class="delete-forever">
+					 <img src="./assets/delete-forever.svg"> 
 						Supprimer la liste
-					</div>
-				-->
+					</div></a>
 				</header>
 
 			
