@@ -20,10 +20,34 @@
 			exit(); 
 		} 
 		//we show the home page 
-		else { ?>
+		else { //j'ai reccup la mise en page de listDetail parce que c'est le meme ???, 
+			//j'ai laissé l'ancienne en commentaire au cas ou
+			?>
+	
 		<div class="wrapper">
 
 		<?php include('sidebar_menu.php') ?>
+
+		<div class="listDetails-desktop-grid">
+			<div class="list-details">
+				
+				<header class="header">
+				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
+					<h2>Prochaines taches</h2>
+					<div> </div>
+				</header>
+
+			
+				<ul class="task-list nav-list">
+					<?php include('processDisplayTask.php') ?>
+				</ul>
+			</div>
+		</div>
+
+		<!--
+		<div class="wrapper">
+
+		<?php //include('sidebar_menu.php') ?>
 
 		<div class="desktop-grid">
 
@@ -32,7 +56,8 @@
 		<p>Prochaines tâches</p>
 		</div>
 		</div>
-		</div>
+		</div> !>
+
 		<script type="module" src="./handler/dist/sidebarList.js"></script>
 	<?php } ?>
 </body>
