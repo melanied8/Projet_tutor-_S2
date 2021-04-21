@@ -29,6 +29,7 @@
 			    <?php	echo $row1['description'] . " "; ?> 
 			    </div>
 			    <a href=""><img class="delete" src="./assets/delete.svg"></a>
+				<!--j'ai enlevé le button sur le delete qui faissait un truc moche j'ai mis un lien à la place -->
 			</li> 
 			<?php
 			}
