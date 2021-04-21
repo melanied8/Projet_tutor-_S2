@@ -40,6 +40,7 @@
 
 			
 				<ul class="task-list nav-list">
+					<?php include('processDisplayTaskListDetails.php') ?>
 					<li class="item-size flex-item add-item">
 							<button type="button" class="js-task-button"><img class="plus" src="./assets/plus.svg" /></button>
 							<input class="js-task-input" type="text" name="" placeholder="Ajouter une tâche...">
