@@ -65,7 +65,7 @@
 							<div class="edit-box style-box flex-item step">
 								<div class="flex-item">
 									<input class="radio radio-size" type="radio" name="radio">
-									<label>Aller sur github.com</label>
+									<label>Aller sur github.com</label> 
 								</div>
 								<img class="remove" src="./assets/remove.svg">
 							</div>
