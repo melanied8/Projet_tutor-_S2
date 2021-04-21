@@ -22,7 +22,15 @@
 			$lesTask  = $task-> fetchAll(PDO::FETCH_ASSOC);
 			foreach($lesTask as $row1) 
 			{
-				echo $row1['description'] . " ";
+			 ?>
+			<li class="nav-box flex-item item-size space-between">
+			    <div class="flex-item">
+			    <input class="radio-size radio" type="radio" name="" id="radio">   
+			    <?php	echo $row1['description'] . " "; ?> 
+			    </div>
+			    <a href=""><img class="delete" src="./assets/delete.svg"></a>
+			</li> 
+			<?php
 			}
 		}
     }
