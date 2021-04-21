@@ -100,7 +100,7 @@
 	<script type="module" src="./handler/dist/form.js"></script>
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
 	<?php } ?>
-	
+	 
 </body>
 </html>
 
