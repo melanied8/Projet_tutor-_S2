@@ -19,10 +19,17 @@
         global $config;
         return $config['uri_prefix'].$route;
     }
-    
-    $handler = $route[$requestURI];
 
-    
+    function removeParametre($requestURI) {
+        $chaineBase = $requestURI;
+        $chaineRendu = "";
+        $tailleChaine = strlen($requestURI);
+        for($i = 0; $i < $tailleChaine && $chaineBase[$i] != "?"; ++$i)
+            $chaineRendu = $chaineRendu . $chaineBase[$i];
+        return $chaineRendu;
+    }
+ 
+    $handler = $route[removeParametre($requestURI)];
     // Si la variable n'a pas de valeur, c'est que l'URI demandée n'est pas dans le
     // tableau, donc n'est pas gérée. 404.
     if (!isset($handler)) {
@@ -37,4 +44,6 @@
     
     
     ?>
+
+
 
