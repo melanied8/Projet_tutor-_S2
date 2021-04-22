@@ -1,4 +1,5 @@
 
+
 <?php
 return [
   '/' => 'login',
@@ -19,6 +20,9 @@ return [
   '/listDetails' => 'listDetails',
   '/processAddList' => 'processAddList',
   '/processDeleteList' => 'processDeleteList',
+  '/processDeleteTask' => 'processDeleteTask',
+  '/processDisplayTask' => 'processDisplayTask',
+  '/processAddTask' => 'processAddTask',
    '/sidebar_menu' => 'sidebar_menu',
    '/processDisplayList' => 'processDisplaysList',
 ];
