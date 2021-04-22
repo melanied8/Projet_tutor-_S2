@@ -16,18 +16,20 @@
 	<ul>
 	<!-- Lists view -->	   
 		<?php include("processDisplayList.php") ?>
-		<?php
-			//Information on the current process
-			if (!empty($_SESSION["msg_addList"])) 
-				{
-					echo ($_SESSION["msg_addList"]); 
-				}
-		?>
 
 		<form action="<?= route('/processAddList') ?>" method="POST">	
 
 	    <button class="button_plus" type="submit"><img src="./assets/plus.svg"></button>
 		<input type="text" class="new_list" name="listName" placeholder="Nouvelle liste">
+
+		<?php
+			//Information on the current process
+			if (!empty($_SESSION["msg_addList"])) 
+				{
+					echo("<br/>");
+					echo ($_SESSION["msg_addList"]); 
+				}
+		?>
 		
 	</ul>
 	</form>
