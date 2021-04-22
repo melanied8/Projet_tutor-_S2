@@ -11,12 +11,10 @@
 
 <body>	
 	<?php
-		//Delete notices
-	error_reporting(E_ALL ^ E_NOTICE);
 		//we test if a session is open 
 		//if not we redirect to the login page
 		if (!isset($_SESSION["email"])) {
-			$_SESSION["msg_connection"] = "Veuillez vous connecter.";
+			echo($_SESSION["msg_connection"] = "Veuillez vous connecter.");
 			header("Location: login");
 			exit(); 
 		} 
@@ -42,10 +40,12 @@
 
 			
 				<ul class="task-list nav-list">
-					<?php include('processDisplayTaskListDetails.php') ?>
+				<?php include('processDisplayTaskListDetails.php') ?>
 					<li class="item-size flex-item add-item">
+					<form action="<?= route('/processAddTask') ?>" method="POST" class="signup">
 							<button type="button" class="js-task-button"><img class="plus" src="./assets/plus.svg" /></button>
-							<input class="js-task-input" type="text" name="" placeholder="Ajouter une tâche...">
+							<input class="js-task-input" type="text" name="description" placeholder="Ajouter une tâche...">
+					</form>
 					</li>
 				</ul>
 			</div>
@@ -67,7 +67,7 @@
 							<div class="edit-box style-box flex-item step">
 								<div class="flex-item">
 									<input class="radio radio-size" type="radio" name="radio">
-									<label>Aller sur github.com</label> 
+									<label>Aller sur github.com</label>
 								</div>
 								<img class="remove" src="./assets/remove.svg">
 							</div>
@@ -98,12 +98,13 @@
 		</div>
 	</div>
 
-	<script type="module" src="./handler/dist/app.js"></script>
+	<!--<script type="module" src="./handler/dist/app.js"></script>
 	<script type="module" src="./handler/dist/index.js"></script>
-	<script type="module" src="./handler/dist/form.js"></script>
+	<script type="module" src="./handler/dist/form.js"></script> -->
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
 	<?php } ?>
-	 
+	
 </body>
 </html>
+
 
