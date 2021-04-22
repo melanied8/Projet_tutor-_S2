@@ -11,6 +11,8 @@
 
 <body>	
 	<?php
+		//Delete notices
+	error_reporting(E_ALL ^ E_NOTICE);
 		//we test if a session is open 
 		//if not we redirect to the login page
 		if (!isset($_SESSION["email"])) {
