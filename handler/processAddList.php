@@ -26,6 +26,7 @@
 				$_SESSION["msg_addList"] = "La liste existe déjà";
 				//If the login exist, vérif = false
 				$verif = false; 
+				header("Location: home");
 			}
 			else {
 				$verif = true;
