@@ -1,6 +1,9 @@
 <!-- FOR THE HOME PAGE -->
 <?php
 
+//Delete notices
+error_reporting(E_ALL ^ E_NOTICE);
+
     $listId = $_GET['id'];
 		
             //we select all of their tasks
