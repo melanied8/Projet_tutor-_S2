@@ -23,7 +23,7 @@
 			
 			if ($result!=null)
 			{
-				$_SESSION["msg_addList"] = "La list existe déjà";
+				$_SESSION["msg_addList"] = "La liste existe déjà";
 				//If the login exist, vérif = false
 				$verif = false; 
 			}
