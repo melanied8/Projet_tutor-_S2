@@ -1,5 +1,6 @@
 <!-- FOR THE HOME PAGE -->
 <?php
+    
     //we select the id of the current user
     $stmt =$db->prepare("SELECT id FROM users WHERE email= :email"); 
     $stmt-> execute(['email' => $_SESSION["email"]]);
@@ -17,21 +18,20 @@
 		foreach($listId as $row) 
 		{
             //we select all of their tasks
-			$task = $db->prepare("SELECT description FROM listitems WHERE idList = :idList"); 
+			$task = $db->prepare("SELECT itemName FROM listitems WHERE idList = :idList"); 
 			$task->execute(['idList'=> $row['idList'] ]);
 			$lesTask  = $task-> fetchAll(PDO::FETCH_ASSOC);
 			foreach($lesTask as $row1) 
 			{
-			 ?>
-			<li class="nav-box flex-item item-size space-between">
-			    <div class="flex-item">
-			    <input class="radio-size radio" type="radio" name="" id="radio">   
-			    <?php	echo $row1['description'] . " "; ?> 
-			    </div>
-			    <a href=""><img class="delete" src="./assets/delete.svg"></a>
-				<!--j'ai enlevé le button sur le delete qui faissait un truc moche j'ai mis un lien à la place -->
-			</li> 
-			<?php
+                ?>
+                <li class="nav-box flex-item item-size space-between">
+                    <div class="flex-item">
+                    <input class="radio-size radio" type="radio" name="" id="radio">   
+                    <?php	echo $row1['itemName'] . " "; ?> 
+                    </div>
+                    <a href=""><img class="delete" src="./assets/delete.svg"></a>
+                </li> 
+			    <?php
 			}
 		}
     }
@@ -39,3 +39,4 @@
         echo "0 results";
     }
 ?>
+
