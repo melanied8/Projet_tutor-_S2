@@ -21,6 +21,7 @@
 		//we show the listDetails page 
 		else { 
 			$_SESSION["idList"] = $_GET['id']; 
+			include('processGetNameList.php');
 			?>
 	<div class="wrapper">
 
@@ -31,7 +32,7 @@
 				
 				<header class="header">
 				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
-					<h2>Projet Tutoré</h2>
+					<h2><?php echo($_SESSION["nameList"]);?></h2>
 					<a href="<?= route('/processDeleteList') ?>"><div class="delete-forever">
 					 <img src="./assets/delete-forever.svg"> 
 						Supprimer la liste
