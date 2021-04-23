@@ -7,14 +7,14 @@
      echo ($idList);
        
     //we add the spot to the database
-    $request = $db->prepare("INSERT INTO listitems (description, idList)
-                             VALUES(:description, :idList)");
+    $request = $db->prepare("INSERT INTO listitems (itemName, idList)
+                             VALUES(:itemName, :idList)");
     
     //the parameters are bind to a specific variable name
     //$description = $input;
       
-    $description = $_POST["description"];
-    $request->bindParam(':description', $description);
+    $itemName = $_POST["itemName"];
+    $request->bindParam(':itemName', $itemName);
     $request->bindParam(':idList', $idList);
     $request->execute();
 
