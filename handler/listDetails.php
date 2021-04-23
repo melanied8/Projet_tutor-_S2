@@ -44,7 +44,7 @@
 					<li class="item-size flex-item add-item">
 					<form action="<?= route('/processAddTask') ?>" method="POST" class="signup">
 							<button type="button" class="js-task-button"><img class="plus" src="./assets/plus.svg" /></button>
-							<input class="js-task-input" type="text" name="description" placeholder="Ajouter une tâche...">
+							<input class="js-task-input" type="text" name="itemName" placeholder="Ajouter une tâche...">
 					</form>
 					</li>
 				</ul>
