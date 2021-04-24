@@ -42,7 +42,9 @@
 				<header class="header">
 				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
 					<h2 <?= "id=" . $_GET['id'] ?> class="title-list"><?php echo($_SESSION["nameList"]);?></h2>
-					<a href="<?= route('/processDeleteList') ?>"><div class="delete-forever">
+					
+					<a href="<?= route('/processDeleteList') ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette liste?'));"> 
+					<div class="delete-forever">
 					 <img src="./assets/delete-forever.svg"> 
 						Supprimer la liste
 					</div></a>
@@ -106,14 +108,16 @@
 		</div>
 	</div>
 
-	<!--<script type="module" src="./handler/dist/app.js"></script>
+	<script type="module" src="./handler/dist/app.js"></script>
 	<script type="module" src="./handler/dist/index.js"></script>
-	<script type="module" src="./handler/dist/form.js"></script> -->
+	<script type="module" src="./handler/dist/form.js"></script> 
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
 	<script type="module" src="./handler/dist/task.js"></script>
 	<?php } ?>
 	
 </body>
 </html>
+
+
 
 
