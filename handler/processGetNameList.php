@@ -1,3 +1,4 @@
+  
 <?php
 $_SESSION["nameList"]=NULL;
 //Delete notices

@@ -13,12 +13,13 @@ CREATE TABLE list (
 );
 
 
-CREATE TABLE listItems (
-    idItem INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    description VARCHAR(30) NOT NULL,
-    deadline DATE NOT NULL ,
-    idList INT(6) NOT NULL,
-    FOREIGN KEY (idList) REFERENCES list(idList)
+CREATE TABLE listitems (
+    iditem INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    itemName VARCHAR(50) NOT NULL,
+    deadline DATE,
+    status boolean,
+    Note VARCHAR(255),
+    idList INT(6) NOT NULL, FOREIGN KEY (idList) REFERENCES list(idList)
 
-)
+);
 

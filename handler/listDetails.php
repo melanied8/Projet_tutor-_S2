@@ -1,3 +1,12 @@
+<?php 
+	$listname = $_GET['id'];
+	$request = $db->prepare("SELECT name FROM list WHERE idList= $listname");
+	$request->execute();
+	$requestResult = $request->fetchAll(PDO::FETCH_ASSOC);
+	foreach($requestResult as $row) {
+		$name = $row['name'];
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +30,7 @@
 		//we show the listDetails page 
 		else { 
 			$_SESSION["idList"] = $_GET['id']; 
+			include('processGetNameList.php');
 			?>
 	<div class="wrapper">
 
@@ -31,7 +41,7 @@
 				
 				<header class="header">
 				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
-					<h2>Projet Tutoré</h2>
+					<h2 <?= "id=" . $_GET['id'] ?> class="title-list"><?php echo($_SESSION["nameList"]);?></h2>
 					<a href="<?= route('/processDeleteList') ?>"><div class="delete-forever">
 					 <img src="./assets/delete-forever.svg"> 
 						Supprimer la liste
@@ -42,10 +52,8 @@
 				<ul class="task-list nav-list">
 				<?php include('processDisplayTaskListDetails.php') ?>
 					<li class="item-size flex-item add-item">
-					<form action="<?= route('/processAddTask') ?>" method="POST" class="signup">
 							<button type="button" class="js-task-button"><img class="plus" src="./assets/plus.svg" /></button>
-							<input class="js-task-input" type="text" name="description" placeholder="Ajouter une tâche...">
-					</form>
+							<input class="js-task-input" type="text" name="" placeholder="Ajouter une tâche...">
 					</li>
 				</ul>
 			</div>
@@ -102,6 +110,7 @@
 	<script type="module" src="./handler/dist/index.js"></script>
 	<script type="module" src="./handler/dist/form.js"></script> -->
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
+	<script type="module" src="./handler/dist/task.js"></script>
 	<?php } ?>
 	
 </body>
