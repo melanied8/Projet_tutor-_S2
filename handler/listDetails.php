@@ -18,7 +18,7 @@
 	<title>Details de la liste</title>
 </head>
 
-<body>	
+<body onLoad="myFunction()">	
 	<?php
 		//we test if a session is open 
 		//if not we redirect to the login page
@@ -113,6 +113,61 @@
 	<script type="module" src="./handler/dist/form.js"></script> 
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
 	<script type="module" src="./handler/dist/task.js"></script>
+	<script>
+	function myFunction() {
+  		const lis = Array.from(document.querySelectorAll(".task"));
+  		lis.map(li => {
+  			initItem(li);
+  		})
+	}
+
+const initItem = (LIElement) => {
+	const input = LIElement.querySelector(".radio");
+	const button = LIElement.querySelector(".delete-task");
+
+	const init = () => {
+			input.addEventListener("change", updateTaskStatus);
+			button.addEventListener("click", removeTask);
+	}
+
+	const destroy = () => {
+			input.removeEventListener("change", updateTaskStatus);
+			button.removeEventListener("click", removeTask);
+	}
+
+	const updateTaskStatus = (e) => {
+		const id = LIElement.id;
+		let status = 0;
+		if(e.target.checked)
+			status = 1;
+		LIElement.classList.toggle("done");
+		updateDB("http://localhost/workspace/ptut2/handler/processUpdateTaskStatus.php", {status: status, id: id});
+	}
+
+	const removeTask = (e) => {
+		const id = LIElement.id;
+		LIElement.remove();
+		updateDB('http://localhost/workspace/ptut/handler/processDeleteTask.php', {id: id}); // no data needed here
+		destroy(LIElement);
+	}
+
+	const updateDB = async (url, data) => { 
+		const options = {
+			method : "POST",
+			headers : {
+				"Content-Type": "application/json;charset=utf-8"
+			},
+			body : JSON.stringify(data)
+		}
+
+		const response = await fetch(url, options);
+
+		return response.status;
+	}
+
+	init();
+}
+	</script>
 	<?php } ?>
 	
 </body>

@@ -33,7 +33,7 @@
 				
 				<header class="header">
 				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
-					<h2>Prochaines taches</h2>
+					<h2>Prochaines tâches</h2>
 					<div> </div>
 				</header>
 

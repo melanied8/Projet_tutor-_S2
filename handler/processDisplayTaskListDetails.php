@@ -10,13 +10,12 @@
 			foreach($lesTask as $row1) 
 			{
 				?>
-                <li class="nav-box flex-item item-size space-between">
+                <li <?= "id=" . $row1['iditem'] ?> class="task nav-box flex-item item-size space-between">
                     <div class="flex-item">
                     <input class="radio-size radio" type="checkbox" name="" id="radio">   
-                    <?php	echo $row1['itemName'] . " ";
-                            echo $row1['iditem'] . " "; ?> 
+                    <?php	echo $row1['itemName']?> 
                     </div>
-                    <a href=""><img class="delete" src="./assets/delete.svg"></a>
+                    <button class="delete-task"><img class="delete" src="./assets/delete.svg"></button>
                 </li> 
 			    <?php
 			}
