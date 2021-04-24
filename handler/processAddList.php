@@ -42,11 +42,28 @@
 					$request->bindParam(':name', $name);
 					$request->bindParam(':id', $id);
 					$request->execute();
-					header("Location: home");
-					
+
+
+
+
+				   //To get the newly created list ID
+						$idListCree;
+						$request = $db->prepare("SELECT idList FROM list WHERE name = :name"); 
+						$request->execute(['name'=> $_POST['listName'] ]);
+						$idOfTheList = $request-> fetch(PDO::FETCH_ASSOC);
+			
+						if($idOfTheList!=NULL)
+						{
+							$idListCree=$idOfTheList['idList'];
+						}
+						else
+						{
+							echo("Erreur dans la récupération de l'ID de la liste");
+						}
+
+					//Go to listDetails page, to the list that was just created
+					header("Location: listDetails?id=" . $idListCree);										
                     exit();
-
-
 			} 
 
 		}
