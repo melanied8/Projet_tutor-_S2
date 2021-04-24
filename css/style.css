@@ -208,6 +208,11 @@ input::placeholder{
 	margin-bottom: 24px;
 }
 
+.delete-task {
+	background: white;
+	border : none;
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -516,14 +521,6 @@ input::placeholder{
 	.grey {
 		background: #BDBDBD;
 	}
-
-	.list-details a {
-		color: #9E9E9E;
-	}
-
-
-
-
 
 }
 
