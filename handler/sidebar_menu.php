@@ -2,7 +2,10 @@
 	
 	<button class="menu-close-button"><img src="./assets/close.svg"></button>
 	<div class="button-home">
-	<img src="./assets/home.svg">
+
+	
+	<a href="<?= route('/home') ?>">
+	<img src="./assets/home.svg"> </a>					
 	<b><?php echo $_SESSION["email"] ?></b> 
 	</div>
 
