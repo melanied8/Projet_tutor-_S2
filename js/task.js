@@ -78,6 +78,7 @@ const initTask = (UListElement) => {
 			let status = 0;
 			if(e.target.checked)
 				status = 1;
+			LIElement.classList.toggle("done");
 			updateDB("http://localhost/workspace/ptut2/handler/processUpdateTaskStatus.php", {status: status, id: id});
 		}
 

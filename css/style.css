@@ -213,6 +213,11 @@ input::placeholder{
 	border : none;
 }
 
+.done {
+	text-decoration: line-through;
+	color: #666666;
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -254,11 +259,13 @@ input::placeholder{
 }
 
 .radio-size {
+	background: black;
 	width: 20px;
 	height: 20px;
 }
 
 .radio {
+	border-radius: 5px;
 	margin : 0 16px 0  15px;
 }
 
