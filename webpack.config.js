@@ -5,6 +5,7 @@ module.exports = {
     app: "./js/app.js",
     index : "./js/index.js",
     sidebarList : "./js/sidebarList.js",
+    task : "./js/task.js",
   },
   output: {
     filename: "[name].js",

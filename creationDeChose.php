@@ -1,5 +1,5 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=ptut;port=3306;charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=ptut;port=3307;charset=utf8mb4";
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -12,7 +12,7 @@ try {
     iditem INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     itemName VARCHAR(50) NOT NULL,
     deadline DATE,
-    status boolean,
+    status boolean NOT NULL DEFAULT 0,
     Note VARCHAR(255),
     idList INT(6) NOT NULL, FOREIGN KEY (idList) REFERENCES list(idList)
 
