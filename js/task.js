@@ -26,14 +26,23 @@ const initTask = (UListElement) => {
 			id: id
 		};
 		const response = await updateDB('http://localhost/workspace/ptut/handler/processAddTask.php', data);
-		if(response !== 200) {
-			//ecrire un message à l'utilisateur?
+		if(response !== 200) { // we managed to access the page?
+			//ecrire un message à l'utilisateur ?
 			return;
 		}
 		const response2 = await fetch('http://localhost/workspace/ptut/handler/processGetId.php');
+		if(response2 !== 200) { // we managed to access the page?
+			//ecrire un message à l'utilisateur ?
+			return;
+		}
 		const data2 = await response2.json();
+		if(data2 === null) { // we managed to retrieve the id?
+			// ecrire un message à l'utilisateur ?
+			return;
+		}
+		// in this case we create the item
 		const item = createItem(input.value);
-		item.id=data2.dernierItem;
+		item.id=data2.dernierItem; // we add the id we retrieved to the item
 		initItem(item);
 		UListElement.prepend(item);
 		input.value = "";
@@ -43,9 +52,16 @@ const initTask = (UListElement) => {
 		button.disabled = (input.value.trim().length === 0);
 	}
 
-	const initItem = (item) => {
-		const input = item.querySelector(".radio");
-		const button = item.querySelector(".delete-task");
+
+	/**
+	*
+	*initializes task deletion and updating
+	*
+	* @param {HTMLLIElement} LIElement - task list
+	*/
+	const initItem = (LIElement) => {
+		const input = LIElement.querySelector(".radio");
+		const button = LIElement.querySelector(".delete-task");
 
 		const init = () => {
 			input.addEventListener("change", updateTaskStatus);
@@ -63,7 +79,7 @@ const initTask = (UListElement) => {
 		* 
 		*/
 		const updateTaskStatus = (e) => {
-			const id = item.id;
+			const id = LIElement.id;
 			let status = 0;
 			if(e.target.checked)
 				status = 1;
@@ -78,11 +94,11 @@ const initTask = (UListElement) => {
 		*
 		*/
 		const removeTask = (e) => {
-			const id = item.id;
+			const id = LIElement.id;
 			console.log(id);
-			item.remove();
+			LIElement.remove();
 			updateDB('http://localhost/workspace/ptut/handler/processDeleteTask.php', {id: id}); // no data needed here
-			destroy(item);
+			destroy(LIElement);
 		}
 
 		init()
@@ -91,7 +107,13 @@ const initTask = (UListElement) => {
 
 
 
-
+	/**
+	*
+	* create an item
+	*
+	* @param {string} inputValue - the string in the input
+	*
+	*/
 	const createItem = (inputValue) => {
 		const item = document.createElement("li");
 		item.classList.add("task","nav-box", "flex-item", "item-size", "space-between");
@@ -157,7 +179,6 @@ const initTask = (UListElement) => {
 
 
 }
-
 
 const list = document.querySelector(".task-list");
 
