@@ -77,7 +77,7 @@ const createItemElement = (itemLabel) => {
 
   const img = document.createElement("img")
   img.classList.add("delete")
-  img.setAttribute("src", "../assets/delete.svg")
+  img.setAttribute("src", "./assets/delete.svg")
 
 
   label.append(link)
