@@ -14,6 +14,7 @@ const initTask = (UListElement) => {
 		updateAddButtonStatus()
 		input.addEventListener("change", updateAddButtonStatus);
 		button.addEventListener("click", handleSubmit);
+		input.addEventListener("keyup", handleSubmitKey);
 	}
 
 
@@ -26,29 +27,23 @@ const initTask = (UListElement) => {
 			id: id
 		};
 		const response = await updateDB('http://localhost/workspace/ptut/handler/processAddTask.php', data);
-		if(response !== 200) { // we managed to access the page?
-			//ecrire un message à l'utilisateur ?
-			return;
-		}
 		const response2 = await fetch('http://localhost/workspace/ptut/handler/processGetId.php');
-		if(response2 !== 200) { // we managed to access the page?
-			//ecrire un message à l'utilisateur ?
-			return;
-		}
 		const data2 = await response2.json();
-		if(data2 === null) { // we managed to retrieve the id?
-			// ecrire un message à l'utilisateur ?
-			return;
-		}
 		// in this case we create the item
 		const item = createItem(input.value);
 		item.id=data2.dernierItem; // we add the id we retrieved to the item
 		initItem(item);
 		UListElement.prepend(item);
 		input.value = "";
+		input.focus();
 	}
 
-	const updateAddButtonStatus = () => {
+	const handleSubmitKey = (e) => {
+		if(e.keyCode === 13)
+			handleSubmit();
+	}
+
+	const updateAddButtonStatus = (e) => {
 		button.disabled = (input.value.trim().length === 0);
 	}
 
@@ -83,8 +78,6 @@ const initTask = (UListElement) => {
 			let status = 0;
 			if(e.target.checked)
 				status = 1;
-			console.log(status);
-			console.log(id);
 			updateDB("http://localhost/workspace/ptut2/handler/processUpdateTaskStatus.php", {status: status, id: id});
 		}
 
@@ -95,7 +88,6 @@ const initTask = (UListElement) => {
 		*/
 		const removeTask = (e) => {
 			const id = LIElement.id;
-			console.log(id);
 			LIElement.remove();
 			updateDB('http://localhost/workspace/ptut/handler/processDeleteTask.php', {id: id}); // no data needed here
 			destroy(LIElement);
@@ -123,12 +115,12 @@ const initTask = (UListElement) => {
 
 		const input = document.createElement("input");
 		input.classList.add("radio-size", "radio");
-		input.type = "radio";
-		input.name = "radio";
-		input.id="radio";
+		input.type = "checkbox";
+		input.name = "checkbox";
+		input.id="checkbox";
 
 		const label = document.createElement("label");
-		label.for="radio";
+		label.for="checkbox";
 
 		const link = document.createElement("a");
 		link.classList.add("open-link");
