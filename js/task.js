@@ -11,7 +11,7 @@ const initTask = (UListElement) => {
 
 
 	const init = () => {
-		updateAddButtonStatus()
+		updateAddButtonStatus();
 		input.addEventListener("change", updateAddButtonStatus);
 		button.addEventListener("click", handleSubmit);
 		input.addEventListener("keyup", handleSubmitKey);
@@ -98,6 +98,11 @@ const initTask = (UListElement) => {
 	}
 
 
+	const initItemOnLoad = (UListElement) => {
+
+	}
+
+
 
 	/**
 	*
@@ -175,3 +180,8 @@ const initTask = (UListElement) => {
 const list = document.querySelector(".task-list");
 
 initTask(list);
+
+
+
+
+
