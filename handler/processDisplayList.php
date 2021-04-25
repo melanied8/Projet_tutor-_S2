@@ -3,7 +3,8 @@
 	$stmt =$db->prepare("SELECT id FROM users WHERE email= :email"); 
 	$stmt-> execute(['email' => $_SESSION["email"]]);
 	$usersId = $stmt-> fetchAll(PDO::FETCH_ASSOC);
-	    if ($usersId > 0) {
+	if ($usersId > 0)
+	{
 		foreach($usersId as $row) 
 	    	{
 			$IDuser = $row["id"];
@@ -15,20 +16,31 @@
 		$lesLists = $list-> fetchAll(PDO::FETCH_ASSOC);
 		foreach($lesLists as $row) 
 		{ 
-			?>
-			<li><a href ="listDetails"></li>
-			<?php 
-			$lien = route('/listDetails');
+			//count the tasks for each list
+			$task = $db->prepare("SELECT count(idItem) AS nbTasks FROM listItems WHERE
+            idList= :idList");
+            $task->execute(['idList' => $row["idList"]]);
+            $tasks = $task->fetchAll(PDO::FETCH_ASSOC);
+
 			?>
 			<div class = "display_list">
-		       <?php echo "<a href =$lien?id=" . $row["idList"] . ">" . $row["name"]."</a>";  
-			?>
+           <li <?php echo "id=". $row["name"] ?> class="nav-list-item">
+                <a <?php echo "href=" . route('/listDetails'). "?id=" . $row['idList'] ?>><?= $row["name"] ?></a>
+			
+				<?php if(intval($tasks[0]["nbTasks"]) !== 0)
+				{ ?>
+					 <div class="increment-box"><p><?php echo $tasks[0]["nbTasks"] ?></p></div> 
+		        <?php 
+				}
+				 ?> 
 			</div>
+		
+            </li>
+			
 			<?php
 	   	}
-		}
+	}
 		else {
 	   	echo "0 results";
 		}
 ?>
-
