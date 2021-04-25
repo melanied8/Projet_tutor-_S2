@@ -141,7 +141,7 @@ const initItem = (LIElement) => {
 		if(e.target.checked)
 			status = 1;
 		LIElement.classList.toggle("done");
-		updateDB("http://localhost/workspace/ptut2/handler/processUpdateTaskStatus.php", {status: status, id: id});
+		updateDB("http://localhost/workspace/ptut/handler/processUpdateTaskStatus.php", {status: status, id: id});
 	}
 
 	const removeTask = (e) => {
