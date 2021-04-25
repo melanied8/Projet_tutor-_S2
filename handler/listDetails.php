@@ -43,12 +43,30 @@
 				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
 					<h2 <?= "id=" . $_GET['id'] ?> class="title-list"><?php echo($_SESSION["nameList"]);?></h2>
 					
-					<a href="<?= route('/processDeleteList') ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette liste?'));"> 
+						
 					<div class="delete-forever">
 					 <img src="./assets/delete-forever.svg"> 
 						Supprimer la liste
-					</div></a>
+					</div>
 				</header>
+				
+				<div class="delete-list">
+				<h3>Supprimer la liste ?</h3>
+				<p>Après avoir été supprimée, une liste ne peut pas être récupérée. 
+				Êtes-vous certain(e) de vouloir supprimer la liste <?php echo($_SESSION["nameList"])?> ?</p>
+				<div class="confirm-delete-buttons">
+				<a href="<?= route('/processDeleteList') ?>"> 
+					<div class="delete-button">
+					 <img src="./assets/delete-forever.svg"> 
+						Supprimer la liste
+					</div></a>
+
+				<div class="cancel-delete">
+					 <img src="./assets/arrow-back.svg" /> 
+						Annuler
+				</div>		
+				</div>
+				</div>
 
 			
 				<ul class="task-list nav-list">
@@ -113,6 +131,7 @@
 	<script type="module" src="./handler/dist/form.js"></script> 
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
 	<script type="text/javascript" src="./handler/dist/task.js"></script>
+	<script type="module" src="./handler/dist/deleteList.js"></script>
 	<?php } ?>
 	
 </body>
