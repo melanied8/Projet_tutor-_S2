@@ -18,7 +18,7 @@
 	<title>Details de la liste</title>
 </head>
 
-<body onLoad="myFunction()">	
+<body>	
 	<?php
 		//we test if a session is open 
 		//if not we redirect to the login page
@@ -43,35 +43,14 @@
 				<button type="button" class="menu-open-button"><img src="./assets/menu.svg"></button>
 					<h2 <?= "id=" . $_GET['id'] ?> class="title-list"><?php echo($_SESSION["nameList"]);?></h2>
 					
+					<a href="<?= route('/processDeleteList') ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette liste?'));"> 
 					<div class="delete-forever">
 					 <img src="./assets/delete-forever.svg"> 
 						Supprimer la liste
-					</div>
+					</div></a>
 				</header>
 
 			
-
-				<!-- Confirm delete list -->
-				<div class="delete-list">
-				<h3>Supprimer la liste ?</h3>
-				<p>Après avoir été supprimée, une liste ne peut pas être récupérée. 
-				Êtes-vous certain(e) de vouloir supprimer la liste <?php echo($_SESSION["nameList"])?> ?</p>
-				<div class="confirm-delete-buttons">
-				<a href="<?= route('/processDeleteList') ?>"> 
-					<div class="delete-button">
-					 <img src="./assets/delete-forever.svg"> 
-						Supprimer la liste
-					</div></a>
-
-				<div class="cancel-delete">
-					 <img src="./assets/arrow-back.svg" /> 
-						Annuler
-				</div>		
-				</div>
-				</div>
-
-
-
 				<ul class="task-list nav-list">
 				<?php include('processDisplayTaskListDetails.php') ?>
 					<li class="item-size flex-item add-item">
@@ -81,7 +60,6 @@
 				</ul>
 			</div>
 		</div>
-
 
 		<div class="edit">
 			<div class="shadow"></div>
@@ -130,69 +108,11 @@
 		</div>
 	</div>
 
-	<!--
 	<script type="module" src="./handler/dist/app.js"></script>
 	<script type="module" src="./handler/dist/index.js"></script>
-	<script type="module" src="./handler/dist/form.js"></script>  -->
+	<script type="module" src="./handler/dist/form.js"></script> 
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
-	<script type="module" src="./handler/dist/task.js"></script>
-	<script type="module" src="./handler/dist/deleteList.js"></script>
-
-	<script>
-	function myFunction() {
-  		const lis = Array.from(document.querySelectorAll(".task"));
-  		lis.map(li => {
-  			initItem(li);
-  		})
-	}
-
-const initItem = (LIElement) => {
-	const input = LIElement.querySelector(".radio");
-	const button = LIElement.querySelector(".delete-task");
-
-	const init = () => {
-			input.addEventListener("change", updateTaskStatus);
-			button.addEventListener("click", removeTask);
-	}
-
-	const destroy = () => {
-			input.removeEventListener("change", updateTaskStatus);
-			button.removeEventListener("click", removeTask);
-	}
-
-	const updateTaskStatus = (e) => {
-		const id = LIElement.id;
-		let status = 0;
-		if(e.target.checked)
-			status = 1;
-		LIElement.classList.toggle("done");
-		updateDB("http://localhost/workspace/ptut/handler/processUpdateTaskStatus.php", {status: status, id: id});
-	}
-
-	const removeTask = (e) => {
-		const id = LIElement.id;
-		LIElement.remove();
-		updateDB('http://localhost/workspace/ptut/handler/processDeleteTask.php', {id: id}); // no data needed here
-		destroy(LIElement);
-	}
-
-	const updateDB = async (url, data) => { 
-		const options = {
-			method : "POST",
-			headers : {
-				"Content-Type": "application/json;charset=utf-8"
-			},
-			body : JSON.stringify(data)
-		}
-
-		const response = await fetch(url, options);
-
-		return response.status;
-	}
-
-	init();
-}
-	</script>
+	<script type="text/javascript" src="./handler/dist/task.js"></script>
 	<?php } ?>
 	
 </body>

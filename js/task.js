@@ -99,12 +99,6 @@ const initTask = (UListElement) => {
 	}
 
 
-	const initItemOnLoad = (UListElement) => {
-
-	}
-
-
-
 	/**
 	*
 	* create an item
@@ -175,12 +169,22 @@ const initTask = (UListElement) => {
 
 	init()
 
+	return initItem
 
 }
 
+
 const list = document.querySelector(".task-list");
 
-initTask(list);
+const initItem = initTask(list);
+
+
+const lis = Array.from(document.querySelectorAll(".task"));
+  lis.map(li => {
+  	initItem(li);
+})
+
+
 
 
 
