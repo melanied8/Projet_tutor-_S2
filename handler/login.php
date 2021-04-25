@@ -25,25 +25,27 @@
 				<label>Mot de passe</label>
 				<input class="box-model" type="password" name="password" placeholder="password">
 				<button class="button box-model pink" type="submit">Connexion</button>
+				<div id ="red">
 				<?php
 					//Information on the current process
 					if (!empty($_SESSION["msg_new_password"])) 
 					{
-						echo ($_SESSION["msg_new_password"]); 
+						echo '<span style="color:green;">' .$_SESSION["msg_new_password"] .'</span>';
 					}
 					if (!empty($_SESSION["msg_login"])) 
 					{
-						echo ($_SESSION["msg_login"]); 
+						echo '<span style="color:red;">' .$_SESSION["msg_login"] .'</span>';
 					}
 					if (!empty($_SESSION["msg_register"])) 
 					{
-						echo ($_SESSION["msg_register"]); 
+						echo '<span style="color:green;">' .$_SESSION["msg_register"] .'</span>';
 					}
 		      			if (!empty($_SESSION["msg_connection"])) 
 					{
 						echo ($_SESSION["msg_connection"]); 
 					}
 					?>
+					</div>
 				<a href="<?= route('/forgottenPassword') ?>">J'ai oublié mon mot de passe</a>
 				<a href="<?= route('/signUp')?>">Pas encore de compte ? Inscrivez-vous !</a>
 			</form>
