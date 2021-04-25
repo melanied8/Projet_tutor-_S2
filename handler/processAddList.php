@@ -63,7 +63,7 @@
 
 					//Go to listDetails page, to the list that was just created
 					header("Location: listDetails?id=" . $idListCree);										
-                   		        exit();
+                    exit();
 			} 
 
 		}

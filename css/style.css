@@ -531,6 +531,77 @@ input::placeholder{
 
 }
 
+/* Message box confirm delete list*/
+.delete-list
+{
+	display : none;
+	height: 224px;
+	width: 480px;
+	top : 25%;
+	right : 30%;
+    margin : auto;
+	position: absolute;
+	background: #FFFFFF;
+	padding-left: 15px;
+}
+
+.dark-background
+{
+	background: #00000066 40%;
+}
+
+.delete-button
+{
+	background-color: #D63031;
+	color: white;
+	font-weight: 500;
+	border-radius: 3px;
+	position : relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 16px;
+	Width : 198px;
+	Height : 48px;
+}
+
+.confirm-delete-buttons
+{
+	display :grid;
+	grid-template-columns: auto auto;
+	grid-gap : 24px;
+	margin-top : 32px;
+}
+
+.open-delete-list
+{
+	display : block;
+}
+
+/*Pas de suppression de liste en version mobile ?*/
+@media screen and (max-width: 767px)
+{
+	.open-delete-list
+{
+	display : none;
+}
+} 
+
+.cancel-delete
+{
+	background-color: #C4C4C4;
+	color: white;
+	font-weight: 500;
+	border-radius: 3px;
+	position : relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 16px;
+	Width : 198px;
+	Height : 48px;	
+}
+
 
 /***************************** Settings *********************************/
 
@@ -725,12 +796,10 @@ input::placeholder{
 
 .menu-open-button
 {
-	/*background: url("./assets/menu.svg");	*/	
 	width : 28px;
 	height : 28px;
 	border : none;
 	background: #FF7675;
-
 }
 
 .menu-close-button
@@ -784,7 +853,6 @@ input::placeholder{
 	.menu-open
 	{
 		display :block;
-		/*grid-template-columns: auto auto;*/
 		width: 90%;
 		height: 100%;
 
@@ -793,7 +861,7 @@ input::placeholder{
 
 	.background_dark
 	{
-		background-color: rgba(0, 0, 0, 0.4);
+		background: #BDBDBD;
 	}
 
 	.sidebar ul
