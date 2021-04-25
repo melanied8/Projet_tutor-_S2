@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 	<head>
 		<title>Mot de passe oublié</title>
@@ -9,7 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
-	<?php
 		<div class="fp-wrapper">
 		<form class="fp" action="<?= route('/processForgottenPassword') ?>" method="POST" class="login">
 			<label class="label">Adresse e-mail</label> 
@@ -25,3 +24,4 @@
 		</div>
 	</body>
 </html>
+
