@@ -10,15 +10,6 @@
 	</head>
 	<body>
 	<?php
-		//we test if a session is open 
-		//if not we redirect to the login page
-		if (!isset($_SESSION["email"])) {
-			$_SESSION["msg_connection"] = "Veuillez vous connectez.";
-			header("Location: login");
-			exit(); 
-		} 
-		//we show the forgottenPassword page 
-		else { ?>
 		<div class="fp-wrapper">
 		<form class="fp" action="<?= route('/processForgottenPassword') ?>" method="POST" class="login">
 			<label class="label">Adresse e-mail</label> 
@@ -32,6 +23,5 @@
 			?>
 		</form>
 		</div>
-	<?php } ?>
 	</body>
 </html>
