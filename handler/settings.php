@@ -69,11 +69,6 @@
 			} 
 		?>
 	</form>
-	<?php if (!empty($_SESSION["msg_change_password"]))
-		    { 
-		     echo $_SESSION["msg_change_password"]; 
-		    } 
-		?>
 	</div>
 
 	</div>
