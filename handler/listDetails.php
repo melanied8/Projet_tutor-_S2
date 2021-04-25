@@ -126,8 +126,7 @@
 		</div>
 	</div>
 
-	<script type="module" src="./handler/dist/app.js"></script>
-	<script type="module" src="./handler/dist/index.js"></script>
+
 	<script type="module" src="./handler/dist/form.js"></script> 
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
 	<script type="text/javascript" src="./handler/dist/task.js"></script>
