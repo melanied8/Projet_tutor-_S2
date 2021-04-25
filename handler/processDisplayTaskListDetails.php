@@ -16,7 +16,7 @@
                 <li <?= "id=" . $row1['iditem'] . " " . $class?> >
                     <div class="flex-item">
                     <input class="radio radio-size" type="checkbox" name="" id="radio" <?php if($row1['status']) { echo "checked"; } ?> >   
-                    <?php	echo $row1['itemName']?> 
+                    <?php	echo htmlspecialchars($row1['itemName'])?> 
                     </div>
                     <button class="delete-task"><img class="delete" src="./assets/delete.svg"></button>
                 </li> 

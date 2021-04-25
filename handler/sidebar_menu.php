@@ -23,7 +23,7 @@
 		<form action="<?= route('/processAddList') ?>" method="POST">	
 
 	    <button class="button_plus" type="submit"><img src="./assets/plus.svg"></button>
-		<input type="text" class="new_list" pattern="[a-zA-Z0-99]{4,99} name="listName" placeholder="Nouvelle liste">
+		<input type="text" class="new_list" pattern="[a-zA-Z0-99]{4,99}" name="listName" placeholder="Nouvelle liste">
 
 		<?php
 			//Information on the current process

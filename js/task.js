@@ -21,7 +21,7 @@ const initTask = (UListElement) => {
 	const handleSubmit = async () => {
 		const title = document.querySelector(".title-list");
 		const id = title.id;
-		const inputValue = input.value;
+		const inputValue = escapeHtml(input.value);
 		const data = {
 			input: inputValue, 
 			id: id
@@ -101,6 +101,22 @@ const initTask = (UListElement) => {
 
 	/**
 	*
+	* escape special characters - equivalent to htmlspecialchar in php
+	*
+	* @param {string} text - unsafe text
+	*/
+	const escapeHtml = (text) => {
+ 		 return text
+      		.replace(/&/g, "&amp;")
+      		.replace(/</g, "&lt;")
+      		.replace(/>/g, "&gt;")
+      		.replace(/"/g, "&quot;")
+      		.replace(/'/g, "&#039;");
+	}
+
+
+	/**
+	*
 	* create an item
 	*
 	* @param {string} inputValue - the string in the input
@@ -124,7 +140,7 @@ const initTask = (UListElement) => {
 
 		const link = document.createElement("a");
 		link.classList.add("open-link");
-		link.textContent = inputValue;
+		link.textContent = escapeHtml(inputValue);
 
 		label.append(link);
 
@@ -179,6 +195,7 @@ const list = document.querySelector(".task-list");
 const initItem = initTask(list);
 
 
+// we do it for each item loaded with php
 const lis = Array.from(document.querySelectorAll(".task"));
   lis.map(li => {
   	initItem(li);
