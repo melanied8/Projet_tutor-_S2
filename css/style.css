@@ -102,24 +102,10 @@ input::placeholder{
 	}
 }
 
+
 /*********************** Home ***********************/
-/*
-.home {
-	display: flex;
-	align-items: center;
-	margin-bottom: 37px;
-}
+ 
 
-.home img {
-	margin-right: 13px;
-}
-
-.home span {
-	font-weight: bold;
-}
-*/
-
-/*
 .increment-box { 
 
 	
@@ -134,9 +120,16 @@ input::placeholder{
 	justify-content: center;
 	align-items: center;
 	color: white;
-	margin-right : 16px;
+	margin-right : 40px;
 }
-*/
+
+.nav-list-item {
+
+	
+	grid-gap : 40px;
+	
+}
+
 /*
 .nav-list {
 	padding: 0;
@@ -666,6 +659,7 @@ input::placeholder{
 	display : grid;	
 	grid-gap : 16px;
 }
+
 
 .display_list a
 {
