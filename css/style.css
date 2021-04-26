@@ -52,13 +52,6 @@ p, h2, h1 {
 }
 
 
-/*
-input::placeholder{
-	text-indent: 1em;
-	color: #ADADAD;
-}
-*/
-
 .box-model {
 	box-sizing: border-box;
 	border : 1px solid #ADADAD;
@@ -130,61 +123,6 @@ input::placeholder{
 	
 }
 
-/*
-.nav-list {
-	padding: 0;
-	margin: 0;
-}
-
-.my-lists li + li {
-	margin-top: 16px;
-}
-
-.my-lists input {
-	border:none;
-	background : #F5F5F5;
-}
-
-.my-lists input:focus {
-	outline: none;
-}
-
-.my-lists input::placeholder {
-	font-weight: 500;
-	color: black;
-}
-
-.my-lists button:focus {
-	outline: none;
-}
-
-.list-button {
-	border : 0;
-	padding: 0;
-}
-
-.nav-list-item {
-	display: flex;
-	justify-content: space-between; 
-}
-
-.list-div {
-	display: flex;
-}
-
-
-.list{
-	margin-top: 39px;
-	margin-bottom: 24px;
-	font-size: 16px;
-}
-
-.settings_and_deco a {
-	font-weight: 500;
-	color: black;
-}
-
-*/
 
 /***************************** listDetails *********************************/
 
@@ -352,6 +290,10 @@ input::placeholder{
 }
 
 @media screen and (max-width: 768px) {
+
+	.nav-list {
+		padding: 0;
+	}
 
 	.delete-forever {
 		display: none;

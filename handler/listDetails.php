@@ -79,6 +79,8 @@
 			</div>
 		</div>
 
+<!-- Etapes : abandonné car pas le temps mais code statique
+
 		<div class="edit">
 			<div class="shadow"></div>
 			<button class="close"><img src="./assets/close.svg" /></button>
@@ -125,10 +127,10 @@
 			</form>
 		</div>
 	</div>
+-->
 
-
-	<script type="module" src="./handler/dist/form.js"></script> 
 	<script type="module" src="./handler/dist/sidebarList.js"></script>
+	<script type="text/javascript" src="./handler/dist/tasklist.js"></script>
 	<script type="text/javascript" src="./handler/dist/task.js"></script>
 	<script type="module" src="./handler/dist/deleteList.js"></script>
 	<?php } ?>

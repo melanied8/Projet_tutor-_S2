@@ -18,16 +18,19 @@
 		foreach($listId as $row) 
 		{
             //we select all of their tasks
-			$task = $db->prepare("SELECT itemName FROM listitems WHERE idList = :idList"); 
+			$task = $db->prepare("SELECT itemName, status, iditem FROM listitems WHERE idList = :idList"); 
 			$task->execute(['idList'=> $row['idList'] ]);
 			$lesTask  = $task-> fetchAll(PDO::FETCH_ASSOC);
 			foreach($lesTask as $row1) 
 			{
+                $class="class=\"task nav-box flex-item item-size space-between\"";
+                if($row1['status'])
+                    $class = "class=\"task nav-box flex-item item-size space-between done\"";
                 ?>
-                <li class="nav-box flex-item item-size space-between">
+                <li <?= "id=" . $row1['iditem'] . " " . $class?> >
                     <div class="flex-item">
-                    <input class="radio-size radio" type="checkbox" name="" id="radio">    
-                    <?php	echo $row1['itemName'] ?> 
+                    <input class="radio radio-size" type="checkbox" name="" id="radio" <?php if($row1['status']) { echo "checked"; } ?> >   
+                    <?php   echo htmlspecialchars($row1['itemName'])?> 
                     </div>
                     <button class="delete-task"><img class="delete" src="./assets/delete.svg"></button>
                 </li> 
